@@ -7,7 +7,7 @@ TEMPLATE_DIR = 'ftw.bob.web:template'
 
 def main():
     """Command Line Interface that will be available through the
-    bin/create-policy script in the buildout directory.
+    bin/create script in the buildout directory.
 
     For now it's a simple wrapper around bin/mrbob with preconfigured
     options
