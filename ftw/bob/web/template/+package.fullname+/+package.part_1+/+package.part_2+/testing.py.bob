@@ -6,7 +6,7 @@ from plone.testing import z2
 from zope.configuration import xmlconfig
 
 
-class ErsigenLayer(PloneSandboxLayer):
+class {{{package.part_1_capitalized}}}Layer(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE, )
 
     def setUpZope(self, app, configurationContext):
@@ -19,13 +19,12 @@ class ErsigenLayer(PloneSandboxLayer):
             context=configurationContext)
 
         z2.installProduct(app, 'ftw.simplelayout')
-        z2.installProduct(app, 'ftw.file')
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'ersigen.web:default')
+        applyProfile(portal, '{{{package.fullname}}}:default')
 
 
-ERSIGEN_FIXTURE = ErsigenLayer()
-ERSIGEN_FUNCTIONAL = FunctionalTesting(
-    bases=(ERSIGEN_FIXTURE, ),
-    name="ersigen.web:functional")
+{{{package.part_1_upper}}}_FIXTURE = {{{package.part_1_capitalized}}}Layer()
+{{{package.part_1_upper}}}_FUNCTIONAL = FunctionalTesting(
+    bases=({{{package.part_1_upper}}}_FIXTURE, ),
+    name="{{{package.fullname}}}:functional")

@@ -5,41 +5,34 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:inflator="http://namespaces.zope.org/inflator"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
-    i18n_domain="ersigen.web">
+    i18n_domain="{{{package.fullname}}}">
 
     <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
     <include file="resources.zcml" />
 
     <genericsetup:registerProfile
-        title="ersigen.web"
+        title="{{{package.fullname}}}"
         name="default"
         directory="profiles/default"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <genericsetup:registerProfile
-        title="ersigen.init"
-        name="init"
-        directory="profiles/init"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
-
     <include package="ftw.upgrade" file="meta.zcml" />
     <upgrade-step:directory
-        profile="ersigen.web:default"
+        profile="{{{package.fullname}}}:default"
         directory="upgrades"
         />
 
     <include package="ftw.inflator" file="meta.zcml" />
     <inflator:customize
-        product="Gemeinde Ersigen"
+        product="{{{package.title}}}"
         />
 
     <inflator:bundle
-        title="ersigen.web: DEVELOPMENT"
+        title="{{{package.fullname}}}: DEVELOPMENT"
         profiles="ftw.inflator:setup-language
-                  ersigen.web:init"
+                  {{{package.fullname}}}:default"
         />
 
 

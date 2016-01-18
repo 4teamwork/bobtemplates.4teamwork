@@ -11,4 +11,4 @@ setup_remote () {
     git fetch $name
 }
 
-setup_remote "{{{product.deployment_label}}}" "zope@{{{product.server_name}}}:{{{product.deployment_path}}}"
+setup_remote "{{{package.deployment_label}}}" "zope@{{{package.server_name}}}:{{{package.deployment_path}}}"

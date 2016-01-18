@@ -1,21 +1,10 @@
 <?xml version="1.0"?>
 <metadata>
     <dependencies>
-        <dependency>profile-collective.mtrsetup:example</dependency>
-        <dependency>profile-errbit.ploneintegration:default</dependency>
-        <dependency>profile-ftw.contacts.simplelayout:default</dependency>
-        <dependency>profile-ftw.datepicker:default</dependency>
-        <dependency>profile-ftw.file:default</dependency>
         <dependency>profile-ftw.footer:default</dependency>
         <dependency>profile-ftw.mobilenavigation:slide</dependency>
-        <dependency>profile-ftw.news:default</dependency>
         <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
-        <dependency>profile-ftw.simplelayout.mapblock:default</dependency>
-        <dependency>profile-ftw.sliderblock:default</dependency>
         <dependency>profile-ftw.upgrade:default</dependency>
-        <dependency>profile-plone.app.caching:default</dependency>
-        <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
         <dependency>profile-plonetheme.onegovbear:default</dependency>
-        <dependency>profile-ftw.servicenavigation:default</dependency>
     </dependencies>
 </metadata>
