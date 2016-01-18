@@ -1,0 +1,27 @@
+[
+    {
+        "_path": "gemeinde",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Gemeinde"
+    },
+    {
+        "_path": "politik",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Politik"
+    },
+    {
+        "_path": "verwaltung",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Verwaltung"
+    },
+    {
+        "_path": "jugend-alter-bildung",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Jugend Alter Bildung"
+    },
+    {
+        "_path": "gemeindeleben",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Gemeindeleben"
+    }
+]

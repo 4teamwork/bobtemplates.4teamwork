@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:theme="http://namespaces.zope.org/ftw.theming"
+    i18n_domain="ersigen.web">
+
+    <include package="ftw.theming" />
+    <browser:resourceDirectory name="ersigen" directory="resources" />
+
+    <theme:resources profile="ersigen.web:default" slot="policy">
+        <theme:scss file="resources/scss/variables.scss" slot="variables" after="ftw.theming:portal_url"/>
+        <theme:scss file="resources/scss/layout.scss" />
+        <theme:scss file="resources/scss/fonts.scss" />
+    </theme:resources>
+
+</configure>

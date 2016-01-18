@@ -1,0 +1,17 @@
+#header .logoRow {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+#page-wrapper {
+  padding: .5em;
+}
+
+#portal-globalnav-wrapper {
+  #portal-globalnav {
+    @include screen-large {
+      margin-right: 0;
+    }
+    border-bottom: 1px solid #a7a64d;
+  }
+}

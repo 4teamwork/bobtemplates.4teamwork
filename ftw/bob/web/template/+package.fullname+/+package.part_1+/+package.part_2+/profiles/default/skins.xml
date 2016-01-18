@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="portal_skins" meta_type="Plone Skins Tool">
+
+    <object name="ersigen.web"
+            meta_type="Filesystem Directory View"
+            directory="ersigen.web:skins/ersigen.web"/>
+
+    <skin-path name="*">
+        <layer name="ersigen.web" insert-after="custom"/>
+
+    </skin-path>
+</object>

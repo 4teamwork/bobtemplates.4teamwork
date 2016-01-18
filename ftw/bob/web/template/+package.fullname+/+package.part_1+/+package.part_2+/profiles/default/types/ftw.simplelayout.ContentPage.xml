@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<object name="ContentPage"
+        meta_type="Factory-based Type Information with dynamic views">
+
+    <property name="behaviors" purge="False">
+        <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation" />
+        <element value="plone.app.dexterity.behaviors.metadata.IPublication" />
+    </property>
+
+    <property name="allowed_content_types" purge="False">
+        <element value="ftw.news.NewsFolder" />
+        <element value="ftw.news.NewsListingBlock" />
+        <element value="FormFolder" />
+    </property>
+
+</object>

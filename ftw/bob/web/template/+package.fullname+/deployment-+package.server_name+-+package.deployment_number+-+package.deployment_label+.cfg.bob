@@ -1,0 +1,5 @@
+[buildout]
+extends =
+    deployment-base.cfg
+
+deployment-number = {{{package.deployment_number}}}

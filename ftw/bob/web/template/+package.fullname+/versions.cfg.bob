@@ -1,0 +1,4 @@
+[buildout]
+extends = http://dist.plone.org/release/{{{package.plone_version}}}/versions.cfg
+
+[versions]

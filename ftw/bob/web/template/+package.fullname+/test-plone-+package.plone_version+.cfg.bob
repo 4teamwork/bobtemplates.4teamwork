@@ -1,0 +1,7 @@
+[buildout]
+extends =
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/test-plone-{{{package.plone_version}}}.cfg
+    versions.cfg
+    sources.cfg
+
+package-name = {{{package.fullname}}}
