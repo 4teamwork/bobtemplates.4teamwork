@@ -26,5 +26,9 @@ setup(name='ftw.bob.web',
       tests_require=extras_require['tests'],
       extras_require=extras_require,
 
-      entry_points={},
+      entry_points="""
+      # -*- Entry points: -*-
+      [console_scripts]
+      create = ftw.bob.web.cli:main
+      """,
       )
