@@ -6,6 +6,9 @@ extras_require = {
     'tests': [
         'plone.app.testing',
         'unittest2',
+        'ftw.builder',
+        'ftw.testbrowser',
+        'ftw.testing',
     ],
 }
 

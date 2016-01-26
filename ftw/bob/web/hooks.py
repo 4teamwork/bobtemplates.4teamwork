@@ -21,6 +21,9 @@ def post_package_name(configurator, question, answer):
 
     configurator.variables['package.part_2'] = part_2
 
+    configurator.variables['package.fullname_underscore'] = "{}_{}".format(
+        part_1, part_2)
+
     return answer
 
 

@@ -1,0 +1,7 @@
+from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
+from ftw.lawgiver.tests.base import WorkflowTest
+
+
+class TestSESWebWorkflowSpecification(WorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+    workflow_path = '../profiles/default/workflows/{{{package.fullname_underscore}}}_workflow'

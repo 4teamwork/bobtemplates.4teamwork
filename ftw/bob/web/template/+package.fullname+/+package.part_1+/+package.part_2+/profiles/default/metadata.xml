@@ -6,5 +6,6 @@
         <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
         <dependency>profile-ftw.upgrade:default</dependency>
         <dependency>profile-plonetheme.onegovbear:default</dependency>
+        <dependency>profile-ftw.lawgiver:default</dependency>
     </dependencies>
 </metadata>
