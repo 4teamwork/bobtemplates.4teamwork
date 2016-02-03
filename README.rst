@@ -12,7 +12,6 @@ Installation
 
     $ git clone git@github.com:4teamwork/ftw.bob.web.git
     $ cd ftw.bob.web
-    $ ln -s development.cfg buildout.cfg
     $ python2.7 bootstrap.py
     $ bin/buildout
 
