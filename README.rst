@@ -19,6 +19,7 @@ Generating a new policy package
 *******************************
 
 .. code:: bash
+
     $ bin/create
 
 You only have to answer all the questions and your policy will be created.
