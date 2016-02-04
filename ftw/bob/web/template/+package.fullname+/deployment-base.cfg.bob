@@ -18,6 +18,3 @@ instance-eggs =
 filestorage-parts = {{{package.fullname}}}
 develop = .
 supervisor-client-startsecs = 20
-
-find-links +=
-    http://psc.4teamwork.ch/simple
