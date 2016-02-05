@@ -48,7 +48,7 @@
   <permission>iterate : Check in content</permission>
   <permission>iterate : Check out content</permission>
   <permission>plone.app.collection: Add Collection</permission>
-  <permission>plonetheme.onegovbear: Customize Design Variables</permission>
+  <permission>plonetheme.blueberry: Customize Design Variables</permission>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht" title="Eingereicht">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--eingereicht_veroffentlicht"/>
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--eingereicht_entwurf"/>
@@ -293,7 +293,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.onegovbear: Customize Design Variables" acquired="False"/>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
   </state>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--entwurf" title="Entwurf">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht"/>
@@ -561,7 +561,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.onegovbear: Customize Design Variables" acquired="False"/>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
   </state>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--veroffentlicht" title="Veröffentlicht">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--veroffentlicht_entwurf"/>
@@ -801,7 +801,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.onegovbear: Customize Design Variables" acquired="False"/>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
   </state>
   <transition new_state="{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht" title="einreichen" transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht" after_script="" before_script="" trigger="USER">
     <action category="workflow" icon="" url="%(content_url)s/content_status_modify?workflow_action={{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht">einreichen</action>

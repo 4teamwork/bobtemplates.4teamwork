@@ -30,7 +30,7 @@ setup(name='{{{package.fullname}}}',
           'ftw.simplelayout [contenttypes]',
           'ftw.upgrade',
           'Plone',
-          'plonetheme.onegovbear',
+          'plonetheme.blueberry',
           'setuptools',
       ],
 
