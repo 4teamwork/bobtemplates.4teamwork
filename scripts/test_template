@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# *********************************** #
+#                                     #
+# Template Tester                     #
+#                                     #
+# for more information see README.rst #
+# *********************************** #
+
+set -e
+
+SCRIPTS_DIR=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+PACKAGE_DIR=$SCRIPTS_DIR/../generated/thor.odinson
+
+cd $SCRIPTS_DIR/../
+
+./scripts/update_lawgiver_workflow
+./scripts/buildout_package
+
+cd $PACKAGE_DIR
+
+echo "Run tests..."
+./bin/test

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# *********************************** #
+#                                     #
+# Lawgiver Workflow Updater           #
+#                                     #
+# for more information see README.rst #
+# *********************************** #
+
+set -e
+
+SCRIPTS_DIR=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+
+TEMPLATE_DIR=$SCRIPTS_DIR/../ftw/bob/web/template/
+PACKAGE_DIR=$SCRIPTS_DIR/../generated/thor.odinson
+
+$SCRIPTS_DIR/buildout_package
+
+cd $PACKAGE_DIR
+
+echo "Updating workflow..."
+./bin/instance run $SCRIPTS_DIR/update_lawgiver_workflow.py
+
+TEMPLATE_WORKFLOW_DIR=$TEMPLATE_DIR/+package.fullname+/+package.part_1+/+package.part_2+/profiles/default/workflows/+package.fullname_underscore+_workflow
+PACKAGE_WORKFLOW_DIR=$PACKAGE_DIR/thor/odinson/profiles/default/workflows/thor_odinson_workflow
+
+rm $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+cp $PACKAGE_WORKFLOW_DIR/definition.xml $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+sed -i.bak 's/thor_odinson/{{{package.fullname_underscore}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+sed -i.bak 's/thor\.odinson/{{{package.fullname}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+rm $TEMPLATE_WORKFLOW_DIR/definition.xml.bob.bak
+
+echo "Workflow successfully updated."
