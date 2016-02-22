@@ -26,8 +26,8 @@ PACKAGE_WORKFLOW_DIR=$PACKAGE_DIR/thor/odinson/profiles/default/workflows/thor_o
 
 rm $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
 cp $PACKAGE_WORKFLOW_DIR/definition.xml $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
-sed -i.bak 's/thor_odinson/{{{package.fullname_underscore}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
-sed -i.bak 's/thor\.odinson/{{{package.fullname}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
-rm $TEMPLATE_WORKFLOW_DIR/definition.xml.bob.bak
+
+sed -i '' 's/thor_odinson/{{{package.fullname_underscore}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+sed -i '' 's/thor\.odinson/{{{package.fullname}}}/g' $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
 
 echo "Workflow successfully updated."
