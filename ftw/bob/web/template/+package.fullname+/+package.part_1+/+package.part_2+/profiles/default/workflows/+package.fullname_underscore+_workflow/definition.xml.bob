@@ -39,15 +39,28 @@
   <permission>Take ownership</permission>
   <permission>View</permission>
   <permission>ftw.footer: Manage Footer</permission>
+  <permission>ftw.news: Add News</permission>
+  <permission>ftw.news: Add NewsFolder</permission>
+  <permission>ftw.news: Add NewsListingBlock</permission>
   <permission>ftw.simplelayout: Add ContentPage</permission>
   <permission>ftw.simplelayout: Add FileListingBlock</permission>
   <permission>ftw.simplelayout: Add GalleryBlock</permission>
   <permission>ftw.simplelayout: Add TextBlock</permission>
   <permission>ftw.simplelayout: Add VideoBlock</permission>
   <permission>ftw.simplelayout: Change Layouts</permission>
+  <permission>ftw.subsite: Add Subsite</permission>
   <permission>iterate : Check in content</permission>
   <permission>iterate : Check out content</permission>
   <permission>plone.app.collection: Add Collection</permission>
+  <permission>plone.app.contenttypes: Add Collection</permission>
+  <permission>plone.app.contenttypes: Add Document</permission>
+  <permission>plone.app.contenttypes: Add Event</permission>
+  <permission>plone.app.contenttypes: Add File</permission>
+  <permission>plone.app.contenttypes: Add Folder</permission>
+  <permission>plone.app.contenttypes: Add Image</permission>
+  <permission>plone.app.contenttypes: Add Link</permission>
+  <permission>plone.app.contenttypes: Add News Item</permission>
+  <permission>plone.app.event: Import Ical</permission>
   <permission>plonetheme.blueberry: Customize Design Variables</permission>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht" title="Eingereicht">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--eingereicht_veroffentlicht"/>
@@ -246,6 +259,23 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.news: Add News" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsFolder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsListingBlock" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -277,6 +307,12 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.subsite: Add Subsite" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="iterate : Check in content" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
@@ -291,6 +327,58 @@
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Collection" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Document" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Event" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Folder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Image" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Link" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add News Item" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.event: Import Ical" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
@@ -507,6 +595,24 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.news: Add News" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsFolder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsListingBlock" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -543,6 +649,12 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.subsite: Add Subsite" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="iterate : Check in content" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -559,6 +671,58 @@
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Collection" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Document" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Event" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Folder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Image" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Link" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add News Item" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.event: Import Ical" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
@@ -754,6 +918,23 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.news: Add News" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsFolder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.news: Add NewsListingBlock" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -785,6 +966,12 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.subsite: Add Subsite" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="iterate : Check in content" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
@@ -799,6 +986,58 @@
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Collection" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Document" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Event" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Folder" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Image" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add Link" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.contenttypes: Add News Item" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.app.event: Import Ical" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
