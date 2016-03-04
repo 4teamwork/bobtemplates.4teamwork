@@ -31,7 +31,7 @@ First checkout the package and create a new branch from the master:
     $ git checkout -b my-mew-feature
     $ git push origin -u my-new-feature
 
-If you are finnished and the feature is working fine,you can merge it into the
+If you are finnished and the feature is working fine, you can merge it into the
 master branch after the quality-check:
 
 .. code:: bash
@@ -61,6 +61,12 @@ The push deployment will run builodut if necessary, installst plone updates and
 restarts the instances.
 If possible, the deployment will run without server downtime. Otherwise, it will
 activate a maintenance-page.
+
+Another example to push a local branch to a nightly installation:
+.. code:: console
+
+    # push my local branch my-branch to the master for the nightly remote
+    git push nightly my-branch:master
 
 
 Compatibility
