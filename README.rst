@@ -22,7 +22,7 @@ Generating a new policy package
 
     $ bin/create
 
-You only have to answer all the questions and your policy will be created.
+You only have to answer all the questions and your policy will be created in the ``generated``.
 
 Development
 -----------

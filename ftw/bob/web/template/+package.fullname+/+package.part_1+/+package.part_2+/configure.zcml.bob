@@ -7,6 +7,8 @@
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     i18n_domain="{{{package.fullname}}}">
 
+    <i18n:registerTranslations directory="locales"/>
+
     <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
     <include file="resources.zcml" />
