@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# *********************************** #
+#                                     #
+# Package Buildouter                  #
+#                                     #
+# for more information see README.rst #
+# *********************************** #
+
+
+set -e
+
+SCRIPTS_DIR=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+
+PACKAGE_DIR=$SCRIPTS_DIR/../generated/thor.odinson
+
+$SCRIPTS_DIR/autogenerate_package
+
+cd $PACKAGE_DIR
+
+ln -s development.cfg buildout.cfg
+
+echo "Run bootstrap..."
+ppython2.7 bootstrap.py
+
+echo "Run buildout..."
+./bin/buildout

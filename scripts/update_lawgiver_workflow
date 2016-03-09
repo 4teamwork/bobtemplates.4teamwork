@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+# *********************************** #
+#                                     #
+# Lawgiver Workflow Updater           #
+#                                     #
+# for more information see README.rst #
+# *********************************** #
+
+set -e
+
+function rename {
+    FILES=$(find -L "$1" -type f)
+    for f in $FILES
+    do
+        sed -i '' 's/thor_odinson/{{{package.fullname_underscore}}}/g' "$f"
+        sed -i '' 's/thor\.odinson/{{{package.fullname}}}/g' "$f"
+        sed -i '' 's/thor/{{{package.part_1}}}/g' "$f"
+        sed -i '' 's/odinson/{{{package.part_2}}}/g' "$f"
+    done
+}
+
+SCRIPTS_DIR=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+
+TEMPLATE_DIR=$SCRIPTS_DIR/../ftw/bob/web/template/
+PACKAGE_DIR=$SCRIPTS_DIR/../generated/thor.odinson
+
+$SCRIPTS_DIR/buildout_package
+
+cd $PACKAGE_DIR
+
+echo "Setup plone site"
+./bin/instance run $SCRIPTS_DIR/setup_plone_site.py
+./bin/instance run $SCRIPTS_DIR/setup_plone_site.py
+
+echo "Updating workflow..."
+./bin/instance rebuild_workflows --site platform
+
+echo "Write back workflow"
+TEMPLATE_WORKFLOW_DIR=$TEMPLATE_DIR/+package.fullname+/+package.part_1+/+package.part_2+/profiles/default/workflows/+package.fullname_underscore+_workflow
+PACKAGE_WORKFLOW_DIR=$PACKAGE_DIR/thor/odinson/profiles/default/workflows/thor_odinson_workflow
+
+rm $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+cp $PACKAGE_WORKFLOW_DIR/definition.xml $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+
+rename $TEMPLATE_WORKFLOW_DIR/definition.xml.bob
+
+echo "Write back translations"
+TEMPLATE_LOCALES_DIR=$TEMPLATE_DIR/+package.fullname+/+package.part_1+/+package.part_2+/locales
+PACKAGE_LOCALES_DIR=$PACKAGE_DIR//thor/odinson/locales
+
+rm -rf $TEMPLATE_LOCALES_DIR
+cp -r $PACKAGE_LOCALES_DIR $TEMPLATE_LOCALES_DIR
+
+mv $TEMPLATE_LOCALES_DIR/thor.odinson.pot $TEMPLATE_LOCALES_DIR/+package.fullname+.pot.bob
+mv $TEMPLATE_LOCALES_DIR/plone.pot $TEMPLATE_LOCALES_DIR/plone.pot.bob
+
+mv $TEMPLATE_LOCALES_DIR/de/LC_MESSAGES/thor.odinson.po $TEMPLATE_LOCALES_DIR/de/LC_MESSAGES/+package.fullname+.po.bob
+mv $TEMPLATE_LOCALES_DIR/de/LC_MESSAGES/plone.po $TEMPLATE_LOCALES_DIR/de/LC_MESSAGES/plone.po.bob
+
+mv $TEMPLATE_LOCALES_DIR/en/LC_MESSAGES/thor.odinson.po $TEMPLATE_LOCALES_DIR/en/LC_MESSAGES/+package.fullname+.po.bob
+mv $TEMPLATE_LOCALES_DIR/en/LC_MESSAGES/plone.po $TEMPLATE_LOCALES_DIR/en/LC_MESSAGES/plone.po.bob
+
+find $TEMPLATE_LOCALES_DIR -name "*.mo" -delete
+
+rename "$TEMPLATE_LOCALES_DIR"
+
+echo "Workflow successfully updated."
