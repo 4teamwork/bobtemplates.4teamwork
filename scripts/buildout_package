@@ -21,7 +21,7 @@ cd $PACKAGE_DIR
 ln -s development.cfg buildout.cfg
 
 echo "Run bootstrap..."
-ppython2.7 bootstrap.py
+python2.7 bootstrap.py
 
 echo "Run buildout..."
 ./bin/buildout
