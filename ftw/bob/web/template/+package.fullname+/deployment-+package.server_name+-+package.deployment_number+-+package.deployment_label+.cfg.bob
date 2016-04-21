@@ -11,7 +11,7 @@ extends =
 
 deployment-number = {{{package.deployment_number}}}
 
-instance-eggs =
+instance-eggs +=
     {{{package.fullname}}}
     ftw.zopemaster
 
