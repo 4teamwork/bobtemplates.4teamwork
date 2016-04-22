@@ -42,6 +42,7 @@
   <permission>ftw.news: Add News</permission>
   <permission>ftw.news: Add NewsFolder</permission>
   <permission>ftw.news: Add NewsListingBlock</permission>
+  <permission>ftw.news: Mark news items to show up on home page</permission>
   <permission>ftw.simplelayout: Add ContentPage</permission>
   <permission>ftw.simplelayout: Add FileListingBlock</permission>
   <permission>ftw.simplelayout: Add GalleryBlock</permission>
@@ -276,6 +277,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -613,6 +615,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -935,6 +938,7 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
