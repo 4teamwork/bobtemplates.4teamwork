@@ -23,6 +23,13 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+    <genericsetup:registerProfile
+        title="{{{package.fullname}}} Example-Content"
+        name="examplecontent"
+        directory="profiles/examplecontent"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
     <include package="ftw.upgrade" file="meta.zcml" />
     <upgrade-step:directory
         profile="{{{package.fullname}}}:default"
@@ -37,8 +44,14 @@
     <inflator:bundle
         title="{{{package.fullname}}}: DEVELOPMENT"
         profiles="ftw.inflator:setup-language
-                  {{{package.fullname}}}:default"
+                  {{{package.fullname}}}:default
+                  {{{package.fullname}}}:examplecontent"
         />
 
+    <inflator:bundle
+        title="{{{package.fullname}}}: PRODUCTION"
+        profiles="ftw.inflator:setup-language
+                  {{{package.fullname}}}:default"
+        />
 
 </configure>
