@@ -22,7 +22,9 @@ Generating a new policy package
 
     $ bin/create
 
-You only have to answer all the questions and your policy will be created in the ``generated``.
+You only have to answer all the questions and your policy will be created in the ``generated`` folder.
+
+A complete documentation for deployments with ftw.bob can be found here: http://devdocs.4teamwork.ch/plone/deployment/deployment/
 
 Development
 -----------
