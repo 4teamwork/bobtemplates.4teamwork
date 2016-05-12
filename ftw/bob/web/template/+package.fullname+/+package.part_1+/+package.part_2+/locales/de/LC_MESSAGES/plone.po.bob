@@ -15,66 +15,65 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 
 #. Default: "Eingereicht"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "Eingereicht"
-msgstr ""
+msgstr "Eingereicht"
 
 #. Default: "Entwurf"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "Entwurf"
-msgstr ""
+msgstr "Entwurf"
 
 #. Default: "Veröffentlicht"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "Veröffentlicht"
-msgstr ""
+msgstr "Veröffentlicht"
 
 #. Default: "einreichen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "einreichen"
-msgstr ""
+msgstr "einreichen"
 
 #. Default: "Internetbenutzer"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Anonymous"
-msgstr ""
+msgstr "Internetbenutzer"
 
 #. Default: "Autor"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Editor"
-msgstr ""
+msgstr "Autor"
 
 #. Default: "System Administrator"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Manager"
-msgstr ""
+msgstr "System Administrator"
 
 #. Default: "Gast"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Reader"
 msgstr ""
 
 #. Default: "Redaktor"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Reviewer"
-msgstr ""
+msgstr "Redaktor"
 
-#. Default: "Verwalter"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#. Default: "Webmaster"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Site Administrator"
-msgstr ""
+msgstr "Webmaster"
 
 #. Default: "veröffentlichen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "veröffentlichen"
-msgstr ""
+msgstr "veröffentlichen"
 
 #. Default: "zurückweisen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "zurückweisen"
-msgstr ""
+msgstr "zurückweisen"
 
 #. Default: "zurückziehen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "zurückziehen"
-msgstr ""
+msgstr "zurückziehen"

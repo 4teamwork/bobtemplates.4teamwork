@@ -1,0 +1,72 @@
+[{{{package.fullname}}} workflow]
+
+Initialzustand: Entwurf
+
+Rollen Zuweisung:
+  Autor => Editor
+  Redaktor => Reviewer
+  Internetbenutzer => Anonymous
+  Webmaster => Site Administrator
+  System Administrator => Manager
+
+
+Sichtbare Rollen:
+  Autor
+  Redaktor
+  Webmaster
+
+
+Allgemein:
+  Ein Redaktor kann das Gleiche wie ein Autor.
+  Ein Webmaster kann das Gleiche wie ein Redaktor.
+  Ein System Administrator kann das gleiche wie ein Webmaster.
+
+  Ein Webmaster kann jeden Inhalt immer ansehen.
+  Ein Webmaster kann jeden Inhalt bearbeiten.
+  Ein Webmaster kann immer Inhalte hinzufügen.
+  Ein Webmaster kann jeden Inhalt löschen.
+  Ein Webmaster kann immer Rollen zuweisen.
+  Ein Webmaster kann immer Portlets verwalten.
+  Ein Webmaster kann immer veröffentlichen.
+  Ein Webmaster kann immer zurückziehen.
+  Ein Webmaster kann immer zurückweisen.
+  Ein Webmaster kann immer einreichen.
+  Ein Webmaster kann immer Inhalte konfigurieren.
+  Ein Webmaster kann Design-Variablen anpassen.
+  Ein Webmaster kann den Footer verwalten.
+
+
+Zustandsänderungen:
+# Entwurf
+  einreichen (Entwurf => Eingereicht)
+  veröffentlichen (Entwurf => Veröffentlicht)
+# Eingereicht
+  veröffentlichen (Eingereicht => Veröffentlicht)
+  zurückziehen (Eingereicht => Entwurf)
+  zurückweisen (Eingereicht => Entwurf)
+# Veröffentlicht
+  zurückziehen (Veröffentlicht => Entwurf)
+
+
+Status Entwurf:
+  Ein Autor kann diesen Inhalt immer hinzufügen.
+  Ein Autor kann diesen Inhalt bearbeiten.
+  Ein Autor kann diesen Inhalt löschen.
+  Ein Autor kann einreichen.
+
+Status Eingereicht:
+  Ein Autor kann diesen Inhalt ansehen.
+  Ein Autor kann diesen Inhalt hinzufügen.
+  Ein Autor kann zurückziehen.
+
+  Ein Redaktor kann diesen Inhalt bearbeiten.
+  Ein Redaktor kann diesen Inhalt löschen.
+  Ein Redaktor kann veröffentlichen.
+
+Status Veröffentlicht:
+  Ein Internetbenutzer kann diesen Inhalt ansehen.
+
+  Ein Autor kann neuen Inhalt hinzufügen.
+
+  Ein Redaktor kann diesen Inhalt bearbeiten.
+  Ein Redaktor kann zurückziehen.

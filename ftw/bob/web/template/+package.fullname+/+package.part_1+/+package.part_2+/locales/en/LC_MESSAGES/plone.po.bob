@@ -15,66 +15,53 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 
 #. Default: "Eingereicht"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "Eingereicht"
 msgstr "Eingereicht"
 
 #. Default: "Entwurf"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "Entwurf"
 msgstr "Entwurf"
 
 #. Default: "Veröffentlicht"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "Veröffentlicht"
 msgstr "Veröffentlicht"
 
 #. Default: "einreichen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "einreichen"
 msgstr "einreichen"
 
 #. Default: "Internetbenutzer"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Anonymous"
 msgstr "Internetbenutzer"
 
 #. Default: "Autor"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Editor"
 msgstr "Autor"
 
 #. Default: "System Administrator"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Manager"
 msgstr "System Administrator"
 
 #. Default: "Gast"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Reader"
 msgstr "Gast"
 
 #. Default: "Redaktor"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Reviewer"
 msgstr "Redaktor"
 
 #. Default: "Verwalter"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Site Administrator"
 msgstr "Verwalter"
 
 #. Default: "veröffentlichen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "veröffentlichen"
 msgstr "veröffentlichen"
 
 #. Default: "zurückweisen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "zurückweisen"
 msgstr "zurückweisen"
 
 #. Default: "zurückziehen"
-#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.txt
 msgid "zurückziehen"
 msgstr "zurückziehen"
