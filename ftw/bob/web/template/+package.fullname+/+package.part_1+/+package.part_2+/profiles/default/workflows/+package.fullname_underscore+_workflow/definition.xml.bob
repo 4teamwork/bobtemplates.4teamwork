@@ -9,8 +9,6 @@
   <permission>ATContentTypes: Add Link</permission>
   <permission>ATContentTypes: Add News Item</permission>
   <permission>Access contents information</permission>
-  <permission>Access future portal content</permission>
-  <permission>Access inactive portal content</permission>
   <permission>Add Folders</permission>
   <permission>Add portal content</permission>
   <permission>Add portal events</permission>
@@ -62,6 +60,8 @@
   <permission>plone.app.contenttypes: Add Link</permission>
   <permission>plone.app.contenttypes: Add News Item</permission>
   <permission>plone.app.event: Import Ical</permission>
+  <permission>plone.portlet.collection: Add collection portlet</permission>
+  <permission>plone.portlet.static: Add static portlet</permission>
   <permission>plonetheme.blueberry: Customize Design Variables</permission>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht" title="Eingereicht">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--eingereicht_veroffentlicht"/>
@@ -121,14 +121,6 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="Access future portal content" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
-    <permission-map name="Access inactive portal content" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
     <permission-map name="Add Folders" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -237,10 +229,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="Sharing page: Delegate Reader role" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
+    <permission-map name="Sharing page: Delegate Reader role" acquired="False"/>
     <permission-map name="Sharing page: Delegate Reviewer role" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
@@ -259,7 +248,10 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.footer: Manage Footer" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -383,7 +375,18 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
+    <permission-map name="plone.portlet.collection: Add collection portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.portlet.static: Add static portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
   </state>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--entwurf" title="Entwurf">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht"/>
@@ -437,22 +440,7 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="Access contents information" acquired="False">
-      <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
-      <permission-role>Reader</permission-role>
-      <permission-role>Reviewer</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
-    <permission-map name="Access future portal content" acquired="False">
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-      <permission-role>Reviewer</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
-    <permission-map name="Access inactive portal content" acquired="False">
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-      <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="Add Folders" acquired="False">
@@ -538,10 +526,7 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="List folder contents" acquired="False">
-      <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
-      <permission-role>Reader</permission-role>
-      <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="Manage properties" acquired="False">
@@ -573,10 +558,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="Sharing page: Delegate Reader role" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
+    <permission-map name="Sharing page: Delegate Reader role" acquired="False"/>
     <permission-map name="Sharing page: Delegate Reviewer role" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
@@ -590,13 +572,13 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="View" acquired="False">
-      <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
-      <permission-role>Reader</permission-role>
-      <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.footer: Manage Footer" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -728,7 +710,18 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
+    <permission-map name="plone.portlet.collection: Add collection portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.portlet.static: Add static portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
   </state>
   <state state_id="{{{package.fullname_underscore}}}_workflow--STATUS--veroffentlicht" title="Veröffentlicht">
     <exit-transition transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--veroffentlicht_entwurf"/>
@@ -785,14 +778,6 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="Access future portal content" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
-    <permission-map name="Access inactive portal content" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
     <permission-map name="Add Folders" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -899,10 +884,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="Sharing page: Delegate Reader role" acquired="False">
-      <permission-role>Manager</permission-role>
-      <permission-role>Site Administrator</permission-role>
-    </permission-map>
+    <permission-map name="Sharing page: Delegate Reader role" acquired="False"/>
     <permission-map name="Sharing page: Delegate Reviewer role" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
@@ -920,7 +902,10 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
+    <permission-map name="ftw.footer: Manage Footer" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -1044,7 +1029,18 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
-    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False"/>
+    <permission-map name="plone.portlet.collection: Add collection portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plone.portlet.static: Add static portlet" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="plonetheme.blueberry: Customize Design Variables" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
   </state>
   <transition new_state="{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht" title="einreichen" transition_id="{{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht" after_script="" before_script="" trigger="USER">
     <action category="workflow" icon="" url="%(content_url)s/content_status_modify?workflow_action={{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht">einreichen</action>
