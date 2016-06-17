@@ -2,7 +2,7 @@
 <metadata>
     <dependencies>
         <dependency>profile-ftw.footer:default</dependency>
-        <dependency>profile-ftw.mobilenavigation:slide</dependency>
+        <dependency>profile-ftw.mobile:default</dependency>
         <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
         <dependency>profile-ftw.upgrade:default</dependency>
         <dependency>profile-ftw.news:default</dependency>
