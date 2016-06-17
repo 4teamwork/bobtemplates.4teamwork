@@ -9,10 +9,10 @@ extras_require = {
     ],
 }
 
-setup(name='ftw.bob.web',
+setup(name='ftw.bob.templates',
       version='1.0.0.dev0',
       author='4teamwork AG',
-      url='https://github.com/4teamwork/ftw.bob.web',
+      url='https://github.com/4teamwork/ftw.bob.templates',
       description="Webpolicy generator with mr.bob template.",
       long_description=open("README.rst").read(),
       license='GPL2',
@@ -32,6 +32,6 @@ setup(name='ftw.bob.web',
       entry_points="""
       # -*- Entry points: -*-
       [console_scripts]
-      create = ftw.bob.web.cli:main
+      create = ftw.bob.templates.cli:main
       """,
       )
