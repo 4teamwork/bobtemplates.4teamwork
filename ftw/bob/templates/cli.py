@@ -2,7 +2,7 @@ import mrbob.cli
 import sys
 
 TARGET_DIR = 'generated/'
-TEMPLATE_DIR = 'ftw.bob.web:template'
+TEMPLATE_DIR = 'ftw.bob.templates:web'
 
 
 def main(args=sys.argv[1:]):
