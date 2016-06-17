@@ -1,7 +1,7 @@
 FTW Web Policy Generator
 ========================
 
-``ftw.bob.web`` installation package to provide a webpolicy generator with mr.bob template.
+``ftw.bob.templates`` installation package to provide a webpolicy generator with mr.bob template.
 
 .. contents:: Table of Contents
 
@@ -10,8 +10,8 @@ Installation
 
 .. code:: bash
 
-    $ git clone git@github.com:4teamwork/ftw.bob.web.git
-    $ cd ftw.bob.web
+    $ git clone git@github.com:4teamwork/ftw.bob.templates.git
+    $ cd ftw.bob.templates
     $ python2.7 bootstrap.py
     $ bin/buildout
 
@@ -107,14 +107,14 @@ The script is doing all this in one step for you.
 Links
 -----
 
-- Github: https://github.com/4teamwork/ftw.bob.web
-- Issues: https://github.com/4teamwork/ftw.bob.web/issues
-- Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.bob.web
+- Github: https://github.com/4teamwork/ftw.bob.templates
+- Issues: https://github.com/4teamwork/ftw.bob.templates/issues
+- Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.bob.templates
 
 Copyright
 ---------
 
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
-``ftw.bob.web`` is licensed under GNU General Public License, version 2.
+``ftw.bob.templates`` is licensed under GNU General Public License, version 2.
 
