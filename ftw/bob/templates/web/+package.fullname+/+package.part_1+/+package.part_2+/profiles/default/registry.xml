@@ -25,5 +25,6 @@
           <element>editmode</element>
       </value>
   </record>
+  <!-- END CACHING -->
 
 </registry>
