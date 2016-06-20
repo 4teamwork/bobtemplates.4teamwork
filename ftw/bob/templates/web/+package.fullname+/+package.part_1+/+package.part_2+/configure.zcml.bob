@@ -14,6 +14,8 @@
     <include file="resources.zcml" />
     <include file="lawgiver.zcml" />
 
+    <include package=".viewlets" />
+
     <genericsetup:registerProfile
         title="{{{package.fullname}}}"
         name="default"

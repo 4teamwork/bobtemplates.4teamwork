@@ -18,3 +18,11 @@ msgstr ""
 #: ./{{{package.part_1}}}/{{{package.part_2}}}/configure.zcml:39
 msgid "{{{package.fullname}}}: DEVELOPMENT"
 msgstr ""
+
+#: ./{{{package.part_1}}}/{{{package.part_2}}}/profiles/default/actions.xml
+msgid "Disable edit mode"
+msgstr "Bearbeitungsmodus deaktivieren"
+
+#: ./{{{package.part_1}}}/{{{package.part_2}}}/profiles/default/actions.xml
+msgid "Enable edit mode"
+msgstr "Bearbeitungsmodus aktivieren"
