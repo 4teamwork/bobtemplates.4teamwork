@@ -5,6 +5,7 @@
         <dependency>profile-ftw.mobile:default</dependency>
         <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
         <dependency>profile-ftw.upgrade:default</dependency>
+        <dependency>profile-ftw.file:default</dependency>
         <dependency>profile-ftw.news:default</dependency>
         <dependency>profile-ftw.subsite:default</dependency>
         <dependency>profile-plonetheme.blueberry.standard:default</dependency>

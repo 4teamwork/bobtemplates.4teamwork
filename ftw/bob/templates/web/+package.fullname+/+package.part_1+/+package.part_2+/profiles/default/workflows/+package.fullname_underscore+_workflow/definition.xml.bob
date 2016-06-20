@@ -36,6 +36,8 @@
   <permission>Sharing page: Delegate roles</permission>
   <permission>Take ownership</permission>
   <permission>View</permission>
+  <permission>ftw.file: Add File</permission>
+  <permission>ftw.file: Edit advanced fields</permission>
   <permission>ftw.footer: Manage Footer</permission>
   <permission>ftw.news: Add News</permission>
   <permission>ftw.news: Add NewsFolder</permission>
@@ -246,6 +248,16 @@
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Edit advanced fields" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False">
@@ -575,6 +587,16 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.file: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Edit advanced fields" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
@@ -899,6 +921,16 @@
     </permission-map>
     <permission-map name="View" acquired="False">
       <permission-role>Anonymous</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Add File" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Edit advanced fields" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>

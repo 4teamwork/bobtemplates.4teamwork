@@ -22,6 +22,7 @@ class {{{package.part_1_capitalized}}}Layer(PloneSandboxLayer):
             context=configurationContext)
 
         z2.installProduct(app, 'ftw.simplelayout')
+        z2.installProduct(app, 'ftw.file')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, '{{{package.fullname}}}:default')
