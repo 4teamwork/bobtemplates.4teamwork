@@ -24,6 +24,7 @@ setup(name='{{{package.fullname}}}',
 
       install_requires=[
           'ftw.footer',
+          'ftw.file',
           'ftw.inflator [dexterity]',
           'ftw.lawgiver',
           'ftw.mobile',

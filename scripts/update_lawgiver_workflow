@@ -22,7 +22,7 @@ function rename {
 
 SCRIPTS_DIR=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
 
-TEMPLATE_DIR=$SCRIPTS_DIR/../ftw/bob/web/template/
+TEMPLATE_DIR=$SCRIPTS_DIR/../ftw/bob/templates/web
 PACKAGE_DIR=$SCRIPTS_DIR/../generated/thor.odinson
 
 $SCRIPTS_DIR/buildout_package
