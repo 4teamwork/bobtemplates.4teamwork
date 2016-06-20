@@ -7,6 +7,8 @@
         <dependency>profile-ftw.upgrade:default</dependency>
         <dependency>profile-ftw.news:default</dependency>
         <dependency>profile-ftw.subsite:default</dependency>
+        <dependency>profile-plone.app.caching:default</dependency>
+        <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
         <dependency>profile-plonetheme.blueberry.standard:default</dependency>
         <dependency>profile-ftw.lawgiver:default</dependency>
         <dependency>profile-ftw.statusmap:default</dependency>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<registry>
+
+  <!-- CACHING -->
+  <record name="plone.caching.interfaces.ICacheSettings.enabled">
+      <value>True</value>
+  </record>
+  <record name="plone.app.caching.interfaces.IPloneCacheSettings.enableCompression">
+      <value>True</value>
+  </record>
+  <!-- disable cache purging for now, since we have no proxies configured
+       to be purged -->
+  <record name="plone.cachepurging.interfaces.ICachePurgingSettings.enabled">
+      <value>False</value>
+  </record>
+
+  <record name="plone.app.caching.weakCaching.plone.content.itemView.etags">
+      <value purge="False">
+          <element>editmode</element>
+      </value>
+  </record>
+
+  <record name="plone.app.caching.weakCaching.plone.content.folderView.etags">
+      <value purge="False">
+          <element>editmode</element>
+      </value>
+  </record>
+
+</registry>
