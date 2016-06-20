@@ -1,0 +1,5 @@
+[buildout]
+extends =
+    test-plone-{{{package.plone_version}}}.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/plone-development.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/checkversions.cfg

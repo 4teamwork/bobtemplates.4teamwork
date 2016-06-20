@@ -1,0 +1,59 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:inflator="http://namespaces.zope.org/inflator"
+    xmlns:profilehook="http://namespaces.zope.org/profilehook"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    i18n_domain="{{{package.fullname}}}">
+
+    <i18n:registerTranslations directory="locales"/>
+
+    <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
+
+    <include file="lawgiver.zcml" />
+
+    <include package=".browser" />
+    <include package=".viewlets" />
+
+    <genericsetup:registerProfile
+        title="{{{package.fullname}}}"
+        name="default"
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <include package="ftw.upgrade" file="meta.zcml" />
+    <upgrade-step:directory
+        profile="{{{package.fullname}}}:default"
+        directory="upgrades"
+        />
+
+    <include package="ftw.inflator" file="meta.zcml" />
+    <inflator:customize
+        product="{{{package.title}}}"
+        />
+
+    <inflator:bundle
+        title="{{{package.fullname}}}: DEVELOPMENT"
+        profiles="ftw.inflator:setup-language
+                  {{{package.fullname}}}:default"
+        />
+
+    <browser:resourceDirectory
+        name="{{{package.part_1}}}"
+        directory="resources"
+        />
+
+    <profilehook:hook
+        profile="{{{package.fullname}}}:default"
+        handler=".icons.remove_icon_expressions_when_profile_installed"
+        />
+
+    <adapter
+        factory=".icons.post_upgrade_remove_icon_expression_factory"
+        name="{{{package.fullname}}}:default" />
+
+</configure>

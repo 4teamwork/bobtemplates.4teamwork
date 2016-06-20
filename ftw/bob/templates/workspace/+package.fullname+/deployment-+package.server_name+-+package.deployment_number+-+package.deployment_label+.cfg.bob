@@ -1,0 +1,20 @@
+[buildout]
+extends =
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/production.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/zeoclients/2.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/maintenance-server.cfg
+    versions.cfg
+    sources.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/warmup.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/authentication.cfg
+
+
+deployment-number = {{{package.deployment_number}}}
+
+instance-eggs +=
+    {{{package.fullname}}}
+    ftw.zopemaster
+
+filestorage-parts = {{{package.fullname}}}
+develop = .
+supervisor-client-startsecs = 20

@@ -4,6 +4,7 @@ import os
 
 extras_require = {
     'tests': [
+        'ftw.testing',
         'plone.app.testing',
         'unittest2',
     ],
@@ -33,5 +34,10 @@ setup(name='ftw.bob.templates',
       # -*- Entry points: -*-
       [console_scripts]
       create = ftw.bob.templates.cli:main
+      test_template = ftw.bob.templates.cli:test_template
+      fulltest = ftw.bob.templates.cli:fulltest
+      autogenerate = ftw.bob.templates.cli:autogenerate
+      buildout_template = ftw.bob.templates.cli:buildout_template
+      update_lawgiver_workflow = ftw.bob.templates.cli:update_lawgiver_workflow
       """,
       )

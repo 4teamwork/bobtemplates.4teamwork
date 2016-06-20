@@ -1,0 +1,35 @@
+from ftw.lawgiver.tests.base import WorkflowTest
+from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
+from path import Path
+import ftw.workspace
+
+
+class CopyFromWorkspaceWorkflowTest(WorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+
+    def setUp(self):
+        super(CopyFromWorkspaceWorkflowTest, self).setUp()
+        if not self._is_base_test():
+            spec_source = Path(ftw.workspace.__file__).joinpath(
+                '..', 'profiles', 'default',
+                'workflows', Path(self.workflow_path).basename(),
+                'specification.de.txt').abspath()
+            spec_target = Path(__file__).joinpath(
+                '..', self.workflow_path).abspath()
+            spec_source.copy(spec_target)
+
+    def _is_base_test(self):
+        return super(CopyFromWorkspaceWorkflowTest, self)._is_base_test() \
+            or type(self) == CopyFromWorkspaceWorkflowTest
+
+
+class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaceContent(CopyFromWorkspaceWorkflowTest):
+    workflow_path = '../profiles/default/workflows/workspace_content_workflow'
+
+
+class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspace(CopyFromWorkspaceWorkflowTest):
+    workflow_path = '../profiles/default/workflows/workspace_workflow'
+
+
+class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaces(CopyFromWorkspaceWorkflowTest):
+    workflow_path = '../profiles/default/workflows/workspaces_workflow'

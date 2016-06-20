@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+
+    <object name="navtree_properties" meta_type="Plone Property Sheet">
+        <property name="metaTypesNotToList" type="lines" purge="False">
+            <element value="File" />
+            <element value="Meeting Item" />
+            <element value="Meeting" />
+            <element value="Workspace" />
+            <element value="ftw.mail.mail" />
+        </property>
+        <property name="showAllParents" type="boolean">True</property>
+    </object>
+
+</object>
