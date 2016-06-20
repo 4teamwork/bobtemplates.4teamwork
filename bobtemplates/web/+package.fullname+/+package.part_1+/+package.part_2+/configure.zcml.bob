@@ -12,7 +12,6 @@
     <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
     <include file="resources.zcml" />
-    <include file="lawgiver.zcml" />
 
     <include package=".viewlets" />
 
