@@ -23,6 +23,7 @@ setup(name='{{{package.fullname}}}',
       zip_safe=False,
 
       install_requires=[
+          'collective.editmodeswitcher',
           'ftw.footer',
           'ftw.inflator [dexterity]',
           'ftw.lawgiver',
