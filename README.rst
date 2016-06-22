@@ -1,7 +1,7 @@
 FTW Web Policy Generator
 ========================
 
-``ftw.bob.templates`` installation package to provide a webpolicy generator with mr.bob template.
+``bobtemplates.4teamwork`` installation package to provide a webpolicy generator with mr.bob template.
 
 .. contents:: Table of Contents
 
@@ -10,8 +10,8 @@ Installation
 
 .. code:: bash
 
-    $ git clone git@github.com:4teamwork/ftw.bob.templates.git
-    $ cd ftw.bob.templates
+    $ git clone git@github.com:4teamwork/bobtemplates.4teamwork.git
+    $ cd bobtemplates.4teamwork
     $ python2.7 bootstrap.py
     $ bin/buildout
 
@@ -45,7 +45,7 @@ Template Tester
 
 .. code:: bash
 
-    $ bin/test_template template-name
+    $ bin/template_test template-name
 
 The generated template would have tests. To be able to run this tests, you have
 to generate it first with ``bin/create``, buildout it an run tests for it.
@@ -131,14 +131,14 @@ regenerate the package and run all tests for it.
 Links
 -----
 
-- Github: https://github.com/4teamwork/ftw.bob.templates
-- Issues: https://github.com/4teamwork/ftw.bob.templates/issues
-- Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.bob.templates
+- Github: https://github.com/4teamwork/bobtemplates.4teamwork
+- Issues: https://github.com/4teamwork/bobtemplates.4teamwork/issues
+- Continuous integration: https://jenkins.4teamwork.ch/search?q=bobtemplates.4teamwork
 
 Copyright
 ---------
 
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
-``ftw.bob.templates`` is licensed under GNU General Public License, version 2.
+``bobtemplates.4teamwork`` is licensed under GNU General Public License, version 2.
 
