@@ -1,0 +1,9 @@
+[buildout]
+extends =
+    http://dist.plone.org/release/{{{package.plone_version}}}/versions.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/hotfixes/{{{package.plone_version}}}.cfg
+
+[versions]
+zc.buildout =
+setuptools =
+distribute =

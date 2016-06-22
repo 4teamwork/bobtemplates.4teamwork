@@ -1,0 +1,18 @@
+[
+
+    {
+      "_path": "spaces",
+      "_type": "Folder",
+      "title": "Arbeitsräume",
+      "_properties": {
+        "layout": ["string", "workspaces_view"]
+      },
+      "_placefulworkflow": ["workspace_policy", "workspace_policy"],
+      "_constrain_types": {
+        "locally": ["Workspace"],
+        "immediately": ["Workspace"]
+      }
+
+    }
+
+]
