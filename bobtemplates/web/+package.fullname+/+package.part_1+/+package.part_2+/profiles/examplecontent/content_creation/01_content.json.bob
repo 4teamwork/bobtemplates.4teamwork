@@ -128,12 +128,6 @@
                         "file:file": "test-files/tf2.docx"
                     }
                 ]
-            },
-            {
-                "_id": "sl-video",
-                "_type": "ftw.simplelayout.VideoBlock",
-                "title": "VideoBlock",
-                "video_url": "https://youtu.be/u08NGTmxp-E"
             }
         ]
     },
@@ -251,12 +245,6 @@
                         "file:file": "test-files/tf2.docx"
                     }
                 ]
-            },
-            {
-                "_id": "sl-video",
-                "_type": "ftw.simplelayout.VideoBlock",
-                "title": "VideoBlock",
-                "video_url": "https://youtu.be/u08NGTmxp-E"
             }
         ]
     }
