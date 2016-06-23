@@ -15,7 +15,8 @@ logger = logging.getLogger('bobtemplates.4teamwork')
 # Value: 'mr.bob template-path'
 AVAILABLE_TEMPLATES = {
     'web': 'bobtemplates:web',
-    'workspace': 'bobtemplates:workspace'
+    'workspace': 'bobtemplates:workspace',
+    'module': 'bobtemplates:module'
     }
 
 # example: ~/projects/bobtemplates
