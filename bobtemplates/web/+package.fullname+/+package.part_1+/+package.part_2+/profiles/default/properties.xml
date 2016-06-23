@@ -5,4 +5,5 @@
               type="string">4teamwork AG</property>
     <property name="validate_email" type="boolean">True</property>
     <property name="email_charset" type="string">utf-8</property>
+    <property name="layout" type="string">simplelayout-view</property>
 </site>

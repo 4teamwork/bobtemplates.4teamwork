@@ -1,0 +1,251 @@
+[
+    {
+        "_path": "example-content-page",
+        "_type": "ftw.simplelayout.ContentPage",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "News",
+        "_children": [
+            {
+                "_path": "example-news-folder",
+                "_type": "ftw.news.NewsFolder",
+                "title": "News Folder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "_children": [
+                    {
+                        "_path": "example-news",
+                        "_type": "ftw.news.News",
+                        "title": "Some News",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "_children": [
+                            {
+                                "_path": "text-block",
+                                "_type": "ftw.simplelayout.TextBlock",
+                                "show_title": false,
+                                "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
+                                "image:file": "images/test_img_1.jpeg",
+                                "_annotations": {
+                                    "ftw.simplelayout.blockconfiguration": {
+                                        "scale": "sl_textblock_large",
+                                        "imagefloat": "no-float"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "_path": "example-news-2",
+                        "_type": "ftw.news.News",
+                        "title": "Some other News",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "_children": [
+                            {
+                                "_path": "text-block",
+                                "_type": "ftw.simplelayout.TextBlock",
+                                "show_title": true,
+                                "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
+                                "image:file": "images/test_img_3.jpeg",
+                                "_annotations": {
+                                    "ftw.simplelayout.blockconfiguration": {
+                                        "scale": "sl_textblock_large",
+                                        "imagefloat": "no-float"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "_path": "example-news-list",
+                "_type": "ftw.news.NewsListingBlock",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "news_listing_config_title": "News",
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "_path": "simplelayout-content",
+        "_type": "ftw.simplelayout.ContentPage",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "Simplelayout Content",
+        "_children": [
+            {
+                "_path": "example-images",
+                "_type": "ftw.simplelayout.GalleryBlock",
+                "title": "Example Images",
+                "show_title": true,
+                "_children": [
+                    {
+                        "_id": "img1",
+                        "_type": "Image",
+                        "title": "Example Image 1",
+                        "image:file": "images/test_img_1.jpeg"
+                    },
+                    {
+                        "_id": "img2",
+                        "_type": "Image",
+                        "title": "Example Image 2",
+                        "image:file": "images/test_img_2.jpeg"
+                    },
+                    {
+                        "_id": "img3",
+                        "_type": "Image",
+                        "title": "Example Image 3",
+                        "image:file": "images/test_img_3.jpeg"
+                    },
+                    {
+                        "_id": "img4",
+                        "_type": "Image",
+                        "title": "Example Image 4",
+                        "image:file": "images/test_img_4.jpeg"
+                    }
+                ]
+            },
+            {
+                "_path": "sl-textblock",
+                "_type": "ftw.simplelayout.TextBlock",
+                "title": "Some Title",
+                "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p/>",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            },
+            {
+                "_path": "sl-filelist",
+                "_type": "ftw.simplelayout.FileListingBlock",
+                "title": "File List",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "_children": [
+                    {
+                        "_id": "test-file1",
+                        "_type": "File",
+                        "title": "Test-File 1",
+                        "file:file": "test-files/tf1.pdf"
+                    },
+                    {
+                        "_id": "test-file2",
+                        "_type": "File",
+                        "title": "Test-File 2",
+                        "file:file": "test-files/tf2.docx"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_path": "example-images",
+        "_type": "ftw.simplelayout.GalleryBlock",
+        "title": "Example Images",
+        "show_title": true,
+        "_children": [
+            {
+                "_id": "img1",
+                "_type": "Image",
+                "title": "Example Image 1",
+                "image:file": "images/test_img_1.jpeg"
+            },
+            {
+                "_id": "img2",
+                "_type": "Image",
+                "title": "Example Image 2",
+                "image:file": "images/test_img_2.jpeg"
+            },
+            {
+                "_id": "img3",
+                "_type": "Image",
+                "title": "Example Image 3",
+                "image:file": "images/test_img_3.jpeg"
+            },
+            {
+                "_id": "img4",
+                "_type": "Image",
+                "title": "Example Image 4",
+                "image:file": "images/test_img_4.jpeg"
+            }
+        ]
+    },
+    {
+        "_path": "welcome-text",
+        "_type": "ftw.simplelayout.TextBlock",
+        "title": "Welcome!",
+        "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p/>",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+    },
+    {
+        "_path": "nachrichten",
+        "_type": "ftw.news.NewsListingBlock",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "news_listing_config_title": "Nachrichten",
+        "current_context": false,
+        "quantity": 5,
+        "filter_by_path": [],
+        "subjects": []
+    },
+    {
+        "_path": "example-subsite",
+        "_type": "ftw.subsite.Subsite",
+        "title": "Some Subsite",
+        "description": "A simple test subsite with some more example content",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "_children": [
+            {
+                "_path": "example-images",
+                "_type": "ftw.simplelayout.GalleryBlock",
+                "title": "Example Images",
+                "show_title": true,
+                "_children": [
+                    {
+                        "_id": "img1",
+                        "_type": "Image",
+                        "title": "Example Image 1",
+                        "image:file": "images/test_img_1.jpeg"
+                    },
+                    {
+                        "_id": "img2",
+                        "_type": "Image",
+                        "title": "Example Image 2",
+                        "image:file": "images/test_img_2.jpeg"
+                    },
+                    {
+                        "_id": "img3",
+                        "_type": "Image",
+                        "title": "Example Image 3",
+                        "image:file": "images/test_img_3.jpeg"
+                    },
+                    {
+                        "_id": "img4",
+                        "_type": "Image",
+                        "title": "Example Image 4",
+                        "image:file": "images/test_img_4.jpeg"
+                    }
+                ]
+            },
+            {
+                "_path": "sl-textblock",
+                "_type": "ftw.simplelayout.TextBlock",
+                "title": "Some Title",
+                "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p/>",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            },
+            {
+                "_path": "sl-filelist",
+                "_type": "ftw.simplelayout.FileListingBlock",
+                "title": "File List",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "_children": [
+                    {
+                        "_id": "test-file1",
+                        "_type": "File",
+                        "title": "Test-File 1",
+                        "file:file": "test-files/tf1.pdf"
+                    },
+                    {
+                        "_id": "test-file2",
+                        "_type": "File",
+                        "title": "Test-File 2",
+                        "file:file": "test-files/tf2.docx"
+                    }
+                ]
+            }
+        ]
+    }
+]
