@@ -13,8 +13,6 @@
 
     <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
-    <include file="lawgiver.zcml" />
-
     <include package=".browser" />
     <include package=".viewlets" />
 
