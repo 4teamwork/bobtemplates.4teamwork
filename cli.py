@@ -73,10 +73,13 @@ class Converter(object):
     def __init__(self, bob_config):
         self.config = bob_config
 
-    def convert(self, path):
+    def convert(self, path, excluded_filenames=[]):
 
         for folder_path, subfolder_names, file_names in os.walk(path, topdown=False):
             for file_name in file_names:
+                if file_name in excluded_filenames:
+                    continue
+
                 file_path = os.path.join(folder_path, file_name)
 
                 self.convert_file_content(file_path)
@@ -261,7 +264,9 @@ class TemplateGeneratorCLI(object):
             self.template_workflow_dir_path)
 
         converter = Converter(self.config)
-        converter.convert(self.template_workflow_dir_path)
+        converter.convert(
+            self.template_workflow_dir_path,
+            excluded_filenames=['.gitignore', 'result.xml.bob'])
 
     def write_back_translations(self):
         logger.info(
