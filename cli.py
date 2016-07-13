@@ -19,13 +19,16 @@ AVAILABLE_TEMPLATES = {
     'module': 'bobtemplates:module'
     }
 
-# example: ~/projects/bobtemplates
+# example: ~/projects/bobtemplates.4teamwork
 MODULE_PATH = os.path.dirname(__file__)
 
-# example: ~/projects/bobtemplates/scripts
+# example: ~/projects/bobtemplates.4teamwork/bobtemplates
+TEMPLATES_PATH = os.path.join(MODULE_PATH, 'bobtemplates')
+
+# example: ~/projects/bobtemplates.4teamwork/scripts
 SCRIPTS_PATH = os.path.join(MODULE_PATH, 'scripts')
 
-# example: ~/projects/bobtemplates/autogenerate
+# example: ~/projects/bobtemplates.4teamwork/autogenerate
 AUTOGENERATE_CONFIG_PATH = os.path.join(MODULE_PATH, 'autogenerate')
 
 # Generated packages will be stored in this folder
@@ -175,7 +178,7 @@ class TemplateGeneratorCLI(object):
             MODULE_PATH, TARGET_DIR, self.config.get('package.fullname'))
 
         self.template_workflow_dir_path = os.path.join(
-            MODULE_PATH,
+            TEMPLATES_PATH,
             self.template_name,
             '+package.fullname+/+package.part_1+/+package.part_2+/'
             'profiles/default/workflows')
@@ -187,7 +190,7 @@ class TemplateGeneratorCLI(object):
             'profiles/default/workflows')
 
         self.template_locales_dir_path = os.path.join(
-            MODULE_PATH,
+            TEMPLATES_PATH,
             self.template_name,
             '+package.fullname+/+package.part_1+/+package.part_2+/locales')
 
