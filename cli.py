@@ -19,13 +19,16 @@ AVAILABLE_TEMPLATES = {
     'module': 'bobtemplates:module'
     }
 
-# example: ~/projects/bobtemplates
+# example: ~/projects/bobtemplates.4teamwork
 MODULE_PATH = os.path.dirname(__file__)
 
-# example: ~/projects/bobtemplates/scripts
+# example: ~/projects/bobtemplates.4teamwork/bobtemplates
+TEMPLATES_PATH = os.path.join(MODULE_PATH, 'bobtemplates')
+
+# example: ~/projects/bobtemplates.4teamwork/scripts
 SCRIPTS_PATH = os.path.join(MODULE_PATH, 'scripts')
 
-# example: ~/projects/bobtemplates/autogenerate
+# example: ~/projects/bobtemplates.4teamwork/autogenerate
 AUTOGENERATE_CONFIG_PATH = os.path.join(MODULE_PATH, 'autogenerate')
 
 # Generated packages will be stored in this folder
@@ -70,10 +73,13 @@ class Converter(object):
     def __init__(self, bob_config):
         self.config = bob_config
 
-    def convert(self, path):
+    def convert(self, path, excluded_filenames=[]):
 
         for folder_path, subfolder_names, file_names in os.walk(path, topdown=False):
             for file_name in file_names:
+                if file_name in excluded_filenames:
+                    continue
+
                 file_path = os.path.join(folder_path, file_name)
 
                 self.convert_file_content(file_path)
@@ -175,7 +181,7 @@ class TemplateGeneratorCLI(object):
             MODULE_PATH, TARGET_DIR, self.config.get('package.fullname'))
 
         self.template_workflow_dir_path = os.path.join(
-            MODULE_PATH,
+            TEMPLATES_PATH,
             self.template_name,
             '+package.fullname+/+package.part_1+/+package.part_2+/'
             'profiles/default/workflows')
@@ -187,7 +193,7 @@ class TemplateGeneratorCLI(object):
             'profiles/default/workflows')
 
         self.template_locales_dir_path = os.path.join(
-            MODULE_PATH,
+            TEMPLATES_PATH,
             self.template_name,
             '+package.fullname+/+package.part_1+/+package.part_2+/locales')
 
@@ -258,7 +264,9 @@ class TemplateGeneratorCLI(object):
             self.template_workflow_dir_path)
 
         converter = Converter(self.config)
-        converter.convert(self.template_workflow_dir_path)
+        converter.convert(
+            self.template_workflow_dir_path,
+            excluded_filenames=['.gitignore', 'result.xml.bob'])
 
     def write_back_translations(self):
         logger.info(
