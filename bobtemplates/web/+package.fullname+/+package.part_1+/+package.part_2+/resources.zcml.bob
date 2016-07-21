@@ -8,8 +8,9 @@
     <browser:resourceDirectory name="{{{package.fullname}}}" directory="resources" />
 
     <theme:resources profile="{{{package.fullname}}}:default" slot="policy">
-        <theme:scss file="resources/scss/variables.scss" slot="variables" after="ftw.theming:portal_url"/>
-        <theme:scss file="resources/scss/layout.scss" />
+        <theme:scss file="resources/scss/config.scss" slot="variables" before="ftw.theming:resources/scss/globals/variables.scss"/>
+        <theme:scss file="resources/scss/variables.scss" slot="variables" after="ftw.theming:resources/scss/globals/variables.scss"/>
+        <theme:scss file="resources/scss/policy.scss" />
     </theme:resources>
 
 </configure>
