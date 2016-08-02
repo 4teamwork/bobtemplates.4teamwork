@@ -40,6 +40,8 @@ Generating a new policy package
 
 You only have to answer all the questions and your policy will be created in the ``generated`` folder.
 
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-create.png
+
 A complete documentation for deployments with ftw.bob can be found here: http://devdocs.4teamwork.ch/plone/deployment/deployment/
 
 Development
@@ -74,6 +76,8 @@ If you want to test only the template you are working on, you can run
 This will autogerenate a new package based on the given template and will
 run tests of this new created package.
 
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-template-test.png
+
 Autogenerate a new package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -83,6 +87,8 @@ To generate a package with predefined values you can use this script.
 
     $ bin/autogenerate template-name
 
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-autogenerate.png
+
 Generate and buildout a new package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -91,6 +97,8 @@ This script generates an new package and runs buildout for it.
 .. code:: bash
 
     $ bin/buildout_package template-name
+
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-buildout-package.png
 
 Lawgiver workflow updater
 -------------------------
@@ -119,6 +127,8 @@ This is a lot of stuff and is error prone.
 
 The script is doing all this in one step for you.
 
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-update-lawgiver-worklfow.png
+
 Full template test
 ------------------
 
@@ -132,11 +142,17 @@ regenerate the package and run all tests for it.
 
     $ bin/fulltest template-name
 
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-fulltest.png
+
 Mr. Bob
 =======
 
-See the documentation of mr.bob <http://mrbob.readthedocs.org/en/latest/>`_  for further information.
+See the documentation of `mr.bob <http://mrbob.readthedocs.org/en/latest/>`_  for further information.
 
+Flowcharts
+==========
+
+Flowcharts are created with `draw.io <https://www.draw.io/>`_
 Links
 =====
 
