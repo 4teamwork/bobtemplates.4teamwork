@@ -7,6 +7,7 @@ extends =
     sources.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/warmup.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/authentication.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/tika-jaxrs-server.cfg
 
 
 deployment-number = {{{package.deployment_number}}}
