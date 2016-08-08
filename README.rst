@@ -127,7 +127,7 @@ This is a lot of stuff and is error prone.
 
 The script is doing all this in one step for you.
 
-.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-update-lawgiver-worklfow.png
+.. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-update-lawgiver-workflow.png
 
 Full template test
 ------------------
