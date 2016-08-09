@@ -3,11 +3,4 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="zsjbe.workspace">
 
-    <browser:page
-        for="*"
-        name="redirect_to_workspaces"
-        class=".redirect.RedirectToWorkspaces"
-        permission="zope2.View"
-        />
-
 </configure>

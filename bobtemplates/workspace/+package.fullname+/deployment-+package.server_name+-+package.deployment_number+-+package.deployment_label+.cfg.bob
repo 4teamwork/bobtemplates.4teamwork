@@ -19,3 +19,15 @@ instance-eggs +=
 filestorage-parts = {{{package.fullname}}}
 develop = .
 supervisor-client-startsecs = 20
+
+[instance0]
+zope-conf-additional +=
+    %import collective.taskqueue
+    <taskqueue />
+    <taskqueue-server />
+
+environment-vars +=
+   BUMBLEBEE_APP_ID               <APP-ID>
+   BUMBLEBEE_SECRET               <SECRET>
+   BUMBLEBEE_INTERNAL_PLONE_URL   <INTERNAL-URL>
+   BUMBLEBEE_PUBLIC_URL           <PUBLIC-URL>

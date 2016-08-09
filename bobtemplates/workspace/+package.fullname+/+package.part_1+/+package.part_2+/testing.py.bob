@@ -7,7 +7,6 @@ from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from zope.configuration import xmlconfig
-from {{{package.fullname}}}.tests import builders
 
 
 class {{{package.part_1_capitalized}}}Layer(PloneSandboxLayer):
@@ -26,10 +25,11 @@ class {{{package.part_1_capitalized}}}Layer(PloneSandboxLayer):
             context=configurationContext)
 
         z2.installProduct(app, 'Products.CMFPlacefulWorkflow')
-        z2.installProduct(app, 'ftw.simplelayout')
         z2.installProduct(app, 'ftw.file')
         z2.installProduct(app, 'ftw.meeting')
         z2.installProduct(app, 'ftw.workspace')
+        z2.installProduct(app, 'ftw.contentpage')
+        z2.installProduct(app, 'collective.taskqueue.pasplugin')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, '{{{package.fullname}}}:default')
