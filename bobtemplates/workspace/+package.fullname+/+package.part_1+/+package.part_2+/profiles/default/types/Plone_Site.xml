@@ -5,6 +5,7 @@
     <property name="filter_content_types">True</property>
     <property name="allowed_content_types" purge="True">
         <element value="Folder" />
+        <element value="NewsFolder" />
     </property>
 
 </object>

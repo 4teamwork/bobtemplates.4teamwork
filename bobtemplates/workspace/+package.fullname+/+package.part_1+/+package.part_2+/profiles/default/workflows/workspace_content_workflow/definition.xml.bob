@@ -37,17 +37,24 @@
   <permission>Sharing page: Delegate roles</permission>
   <permission>Take ownership</permission>
   <permission>View</permission>
+  <permission>ftw.contentpage: Add AddressBlock</permission>
+  <permission>ftw.contentpage: Add ContentPage</permission>
+  <permission>ftw.contentpage: Add EventFolder</permission>
+  <permission>ftw.contentpage: Add EventPage</permission>
+  <permission>ftw.contentpage: Add ListingBlock</permission>
+  <permission>ftw.contentpage: Add News</permission>
+  <permission>ftw.contentpage: Add NewsFolder</permission>
+  <permission>ftw.contentpage: Add TextBlock</permission>
+  <permission>ftw.contentpage: Add teaser link</permission>
+  <permission>ftw.contentpage: Edit teaser image on ContentPage</permission>
+  <permission>ftw.contentpage: Edit teaser image on EventPage</permission>
+  <permission>ftw.contentpage: Edit teaser image on News</permission>
+  <permission>ftw.contentpage: Toggle IAuthority marker interface</permission>
   <permission>ftw.file: Add File</permission>
   <permission>ftw.file: Edit advanced fields</permission>
   <permission>ftw.footer: Manage Footer</permission>
   <permission>ftw.meeting: Add Meeting</permission>
   <permission>ftw.meeting: Add Meeting Item</permission>
-  <permission>ftw.simplelayout: Add ContentPage</permission>
-  <permission>ftw.simplelayout: Add FileListingBlock</permission>
-  <permission>ftw.simplelayout: Add GalleryBlock</permission>
-  <permission>ftw.simplelayout: Add TextBlock</permission>
-  <permission>ftw.simplelayout: Add VideoBlock</permission>
-  <permission>ftw.simplelayout: Change Layouts</permission>
   <permission>ftw.workspace: Add Workspace</permission>
   <permission>iterate : Check in content</permission>
   <permission>iterate : Check out content</permission>
@@ -211,6 +218,63 @@
       <permission-role>Manager</permission-role>
       <permission-role>Reader</permission-role>
     </permission-map>
+    <permission-map name="ftw.contentpage: Add AddressBlock" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add ContentPage" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add EventFolder" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add EventPage" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add ListingBlock" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add News" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add NewsFolder" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add TextBlock" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Add teaser link" acquired="False"/>
+    <permission-map name="ftw.contentpage: Edit teaser image on ContentPage" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Edit teaser image on EventPage" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Edit teaser image on News" acquired="False">
+      <permission-role>Contributor</permission-role>
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.contentpage: Toggle IAuthority marker interface" acquired="False"/>
     <permission-map name="ftw.file: Add File" acquired="False">
       <permission-role>Contributor</permission-role>
       <permission-role>Editor</permission-role>
@@ -226,36 +290,6 @@
       <permission-role>Manager</permission-role>
     </permission-map>
     <permission-map name="ftw.meeting: Add Meeting Item" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Add FileListingBlock" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Add GalleryBlock" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Add TextBlock" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Add VideoBlock" acquired="False">
-      <permission-role>Contributor</permission-role>
-      <permission-role>Editor</permission-role>
-      <permission-role>Manager</permission-role>
-    </permission-map>
-    <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
       <permission-role>Contributor</permission-role>
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>

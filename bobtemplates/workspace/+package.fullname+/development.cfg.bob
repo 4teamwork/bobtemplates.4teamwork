@@ -4,3 +4,15 @@ extends =
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/plone-development.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/checkversions.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/plone-development-tika.cfg
+
+[instance]
+zope-conf-additional +=
+    %import collective.taskqueue
+    <taskqueue />
+    <taskqueue-server />
+
+environment-vars +=
+   BUMBLEBEE_APP_ID               platform
+   BUMBLEBEE_SECRET               <SECRET>
+   BUMBLEBEE_INTERNAL_PLONE_URL   http://localhost:8080/platform
+   BUMBLEBEE_PUBLIC_URL           http://localhost:3000

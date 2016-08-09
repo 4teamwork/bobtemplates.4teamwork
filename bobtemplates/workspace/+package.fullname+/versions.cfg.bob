@@ -7,3 +7,4 @@ extends =
 zc.buildout =
 setuptools =
 distribute =
+ftw.contentpage = 1.12.0

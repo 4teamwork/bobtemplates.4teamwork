@@ -12,4 +12,17 @@
         <property name="showAllParents" type="boolean">True</property>
     </object>
 
+    <object name="ftw.dashboard"  meta_type="Plone Property Sheet">
+        <property name="dashboardEditable" type="boolean">True</property>
+            <property name="addable_portlets" type="lines">
+                <element value="ftw.dashboard.portlets.postit:Postit"/>
+                <element value="ftw.dashboard.portlets.favourites:Favoriten"/>
+                <element value="ftw.dashboard.portlets.recentlymodified:RecentlyModified"/>
+                <element value="portlets.Calendar:Kalender"/>
+                <element value="portlets.rss:RSS"/>
+            </property>
+            <property name="columnNumber" type="int">3</property>
+        <property name="showrightcolumn" type="boolean">True</property>
+    </object>
+
 </object>
