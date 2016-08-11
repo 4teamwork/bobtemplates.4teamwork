@@ -1,0 +1,5 @@
+/* Remove double icons from content links */
+.activity a[class^="contenttype-"] {
+    background: none;
+    padding: 0px;
+}

@@ -2,10 +2,99 @@
 <object name="portal_actions"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
-    <object name="user">
+    <object name="user" meta_type="CMF Action Category">
         <object name="login" meta_type="CMF Action" i18n:domain="plone">
             <property name="url_expr"
                 type="string">string:${globals_view/navigationRootUrl}/login?view=form</property>
+        </object>
+    </object>
+
+    <object name="object" meta_type="CMF Action Category">
+        <object name="folderContents" meta_type="CMF Action" i18n:domain="plone">
+         <property name="visible">False</property>
+        </object>
+        <object name="contentrules" meta_type="CMF Action" i18n:domain="plone">
+         <property name="visible">False</property>
+        </object>
+        <object name="local_roles" meta_type="CMF Action" i18n:domain="plone">
+         <property name="visible">False</property>
+        </object>
+        <object name="workflowmap" meta_type="CMF Action" i18n:domain="plone">
+          <property name="visible">False</property>
+        </object>
+    </object>
+
+    <object name="object_buttons" meta_type="CMF Action Category">
+
+        <object name="manage-portlets" meta_type="CMF Action">
+            <property name="visible">False</property>
+        </object>
+
+
+        <object name="participants" meta_type="CMF Action">
+            <property name="visible">False</property>
+        </object>
+
+        <object name="folderContents" meta_type="CMF Action" i18n:domain="plone">
+             <property name="title" i18n:translate="">Contents</property>
+             <property name="description" i18n:translate=""></property>
+             <property
+                name="url_expr">string:${globals_view/getCurrentFolderUrl}/folder_contents</property>
+             <property name="link_target"></property>
+             <property name="icon_expr"></property>
+             <property name="available_expr">object/displayContentsTab</property>
+             <property name="permissions">
+                <element value="List folder contents"/>
+             </property>
+             <property name="visible">True</property>
+        </object>
+        <object name="contentrules" meta_type="CMF Action" i18n:domain="plone">
+             <property name="title" i18n:translate="">Rules</property>
+             <property name="description" i18n:translate=""></property>
+             <property
+                name="url_expr">string:${plone_context_state/canonical_object_url}/@@manage-content-rules</property>
+             <property name="link_target"></property>
+             <property name="icon_expr"></property>
+             <property
+                name="available_expr">python:plone_context_state.canonical_object().restrictedTraverse('@@plone_contentrules_info').show_rules_tab()</property>
+             <property name="permissions">
+                <element value="Content rules: Manage rules"/>
+             </property>
+             <property name="visible">True</property>
+        </object>
+        <object name="local_roles" meta_type="CMF Action" i18n:domain="plone">
+             <property name="title" i18n:translate="">Sharing</property>
+             <property name="description" i18n:translate=""></property>
+             <property name="url_expr">string:${object_url}/@@sharing</property>
+             <property name="link_target"></property>
+             <property name="icon_expr"></property>
+             <property name="available_expr"></property>
+             <property name="permissions">
+                <element value="Sharing page: Delegate roles"/>
+             </property>
+             <property name="visible">True</property>
+        </object>
+        <object name="notification" meta_type="CMF Action" i18n:domain="plone">
+             <property name="title" i18n:translate="">Notification</property>
+             <property name="description" i18n:translate=""></property>
+             <property name="url_expr">string:${object_url}/notification_form</property>
+             <property name="permissions">
+                <element value="View"/>
+             </property>
+             <property name="visible">True</property>
+        </object>
+        <object name="update_partnerid" meta_type="CMF Action" i18n:domain="plone">
+             <property name="title" i18n:translate="">Update Partner ID</property>
+             <property name="description" i18n:translate=""></property>
+             <property
+                name="url_expr">string:${globals_view/getCurrentFolderUrl}/update_partnerid</property>
+             <property name="link_target"></property>
+             <property name="icon_expr"></property>
+             <property name="available_expr">python: context.portal_type=='ClassificationItem'</property>
+             <property name="permissions">
+                <element value="Manage Portal"/>
+             </property>
+             <property name="visible">True</property>
         </object>
     </object>
 
