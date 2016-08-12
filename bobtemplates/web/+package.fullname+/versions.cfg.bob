@@ -5,5 +5,3 @@ extends =
 
 [versions]
 zc.buildout =
-setuptools =
-distribute =

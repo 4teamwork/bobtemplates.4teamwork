@@ -4,4 +4,5 @@ extends =
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/hotfixes/{{{package.plone_version}}}.cfg
 
 [versions]
+zc.buildout =
 ftw.contentpage = 1.12.0
