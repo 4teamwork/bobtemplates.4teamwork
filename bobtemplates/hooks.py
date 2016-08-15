@@ -31,3 +31,15 @@ def post_package_name(configurator, question, answer):
 def pre_skip_configure_deployment(configurator, question):
     if not configurator.variables['package.configure_deployment']:
         raise(SkipQuestion)
+
+
+def get_plone_classifier_version(configurator, question, answer):
+    an_split = answer.split('.')
+
+    if len(an_split) <= 1:
+        raise ValidationError(
+            'The plone version needs to have at least 2 digits e.g.: 4.3')
+
+    configurator.variables['package.classifier_version'] = '.'.join(an_split[:2])
+
+    return answer
