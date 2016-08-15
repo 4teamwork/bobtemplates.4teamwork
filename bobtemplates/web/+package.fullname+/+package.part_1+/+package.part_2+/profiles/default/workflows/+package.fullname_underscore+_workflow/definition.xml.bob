@@ -39,6 +39,8 @@
   <permission>ftw.file: Add File</permission>
   <permission>ftw.file: Edit advanced fields</permission>
   <permission>ftw.footer: Manage Footer</permission>
+  <permission>ftw.htmlblock: Add HTML block</permission>
+  <permission>ftw.iframeblock: Add iFrame block</permission>
   <permission>ftw.news: Add News</permission>
   <permission>ftw.news: Add NewsFolder</permission>
   <permission>ftw.news: Add NewsListingBlock</permission>
@@ -46,9 +48,13 @@
   <permission>ftw.simplelayout: Add ContentPage</permission>
   <permission>ftw.simplelayout: Add FileListingBlock</permission>
   <permission>ftw.simplelayout: Add GalleryBlock</permission>
+  <permission>ftw.simplelayout: Add MapBlock</permission>
   <permission>ftw.simplelayout: Add TextBlock</permission>
   <permission>ftw.simplelayout: Add VideoBlock</permission>
   <permission>ftw.simplelayout: Change Layouts</permission>
+  <permission>ftw.slider: Add Container</permission>
+  <permission>ftw.slider: Add Pane</permission>
+  <permission>ftw.sliderblock: Add SliderBlock</permission>
   <permission>ftw.subsite: Add Subsite</permission>
   <permission>iterate : Check in content</permission>
   <permission>iterate : Check out content</permission>
@@ -264,6 +270,8 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
+    <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -298,6 +306,11 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.simplelayout: Add MapBlock" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add TextBlock" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
@@ -309,6 +322,23 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Container" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Pane" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.sliderblock: Add SliderBlock" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
@@ -596,6 +626,8 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
+    <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -633,6 +665,12 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.simplelayout: Add MapBlock" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add TextBlock" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -646,6 +684,24 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Container" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Pane" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.sliderblock: Add SliderBlock" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
@@ -928,6 +984,8 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
+    <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -962,6 +1020,11 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.simplelayout: Add MapBlock" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.simplelayout: Add TextBlock" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
@@ -973,6 +1036,23 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Container" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.slider: Add Pane" acquired="False">
+      <permission-role>Editor</permission-role>
+      <permission-role>Manager</permission-role>
+      <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.sliderblock: Add SliderBlock" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
