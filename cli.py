@@ -224,22 +224,22 @@ class TemplateGeneratorCLI(object):
 
             os.symlink('development.cfg', 'buildout.cfg')
 
-            subprocess.call([sys.executable, 'bootstrap.py'])
-            subprocess.call(['bin/buildout'])
+            subprocess.check_call([sys.executable, 'bootstrap.py'])
+            subprocess.check_call(['bin/buildout'])
 
     def run_template_tests(self):
         with FSFolderContext(self.generated_package_path):
             logger.info(
                 "Run tests for package {}".format(os.getcwd()))
 
-            subprocess.call(['bin/test'])
+            subprocess.check_call(['bin/test'])
 
     def setup_plone_site(self):
         with FSFolderContext(self.generated_package_path):
             logger.info(
                 "Setup plonesite for package {}".format(os.getcwd()))
 
-            subprocess.call([
+            subprocess.check_call([
                 'bin/instance',
                 'run',
                 os.path.join(SCRIPTS_PATH, 'setup_plone_site.py')])
@@ -249,7 +249,7 @@ class TemplateGeneratorCLI(object):
             logger.info(
                 "Update workflow for package {}".format(os.getcwd()))
 
-            subprocess.call(['bin/instance', 'rebuild_workflows --site platform'])
+            subprocess.check_call(['bin/instance', 'rebuild_workflows --site platform'])
 
     def write_back_workflow(self):
         logger.info(
