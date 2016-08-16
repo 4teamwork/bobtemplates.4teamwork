@@ -1,84 +1,17 @@
-from ftw.lawgiver.tests.base import WorkflowTest
 from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
-from path import Path
-import ftw.workspace
-import os
-
-
-class CompareWorkspaceWorkflowTest(WorkflowTest):
-    layer = {{{package.part_1_upper}}}_FUNCTIONAL
-
-    specification_name = 'specification.de.txt'
-
-    def setUp(self):
-        super(CompareWorkspaceWorkflowTest, self).setUp()
-        if self._is_base_test():
-            return
-
-        spec_source_path = Path(ftw.workspace.__file__).joinpath(
-            '..', 'profiles', 'default',
-            'workflows', Path(self.workflow_path).basename(),
-            self.specification_name).abspath()
-
-        self.assertTrue(
-            os.path.isfile(spec_source_path),
-            "The source file at '{}' does no longer exists.".format(
-                spec_source_path))
-
-        spec_source = open(spec_source_path).read()
-
-        spec_target_path = Path(__file__).joinpath(
-            '..', self.workflow_path, self.specification_name).abspath()
-
-        spec_target = ''
-        if os.path.isfile(spec_target_path):
-            spec_target = open(spec_target_path).read()
-
-        self.maxDiff = None
-        self.assertMultiLineEqual(
-            spec_source, spec_target,
-            """
-            Your policy specification.txt is not anymore synced with the
-            specifiaction in ftw.workspace.
-
-            ftw.workspace provides a recommended workflow which should be used
-            in your package. Perhaps this workflow have been updated and you
-            didn't updated your policy with that new workflow.
-
-            If this is the case, just type in the following command to fix the test:
-
-            cp {} {}
-
-            Otherwise if you want to provide an own workflow in your policy which
-            is different than the recommended workflow in ftw.workspace,
-            you have to adjust the failing testcase. Just inherit from the
-            `WorfklowTest` class directly and your wokflow will be tested as usual:
-
-            Rename:
-
-            {}(CompareWorkspaceWorkflowTest)
-
-            to
-
-            {}(WorkflowTest)
-            """.format(
-                spec_source_path,
-                spec_target_path,
-                self.__class__.__name__,
-                self.__class__.__name__))
-
-    def _is_base_test(self):
-        return super(CompareWorkspaceWorkflowTest, self)._is_base_test() \
-            or type(self) == CompareWorkspaceWorkflowTest
+from ftw.workspace.tests.base import CompareWorkspaceWorkflowTest
 
 
 class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaceContent(CompareWorkspaceWorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspace_content_workflow'
 
 
 class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspace(CompareWorkspaceWorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspace_workflow'
 
 
 class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaces(CompareWorkspaceWorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspaces_workflow'

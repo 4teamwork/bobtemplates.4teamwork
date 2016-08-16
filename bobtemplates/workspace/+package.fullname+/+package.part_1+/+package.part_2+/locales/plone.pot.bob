@@ -102,3 +102,8 @@ msgstr ""
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/workspaces_workflow/specification.de.txt
 msgid "workspaces_workflow--ROLE--Owner"
 msgstr ""
+
+#. Default: "Arbeitsraum Ersteller"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/workspaces_workflow/specification.de.txt
+msgid "workspaces_workflow--ROLE--Reviewer"
+msgstr ""
