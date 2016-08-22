@@ -8,6 +8,9 @@
         <dependency>profile-ftw.file:default</dependency>
         <dependency>profile-ftw.news:default</dependency>
         <dependency>profile-ftw.subsite:default</dependency>
+        <dependency>profile-ftw.htmlblock:default</dependency>
+        <dependency>profile-ftw.iframeblock:default</dependency>
+        <dependency>profile-ftw.sliderblock:default</dependency>
         <dependency>profile-plone.app.caching:default</dependency>
         <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
         <dependency>profile-ftw.redirector:default</dependency>
