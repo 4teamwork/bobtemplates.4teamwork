@@ -53,6 +53,7 @@
   <permission>ftw.simplelayout: Add TextBlock</permission>
   <permission>ftw.simplelayout: Add VideoBlock</permission>
   <permission>ftw.simplelayout: Change Layouts</permission>
+  <permission>ftw.simplelayout: Hide title</permission>
   <permission>ftw.slider: Add Container</permission>
   <permission>ftw.slider: Add Pane</permission>
   <permission>ftw.sliderblock: Add SliderBlock</permission>
@@ -329,6 +330,10 @@
     <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.simplelayout: Hide title" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.slider: Add Container" acquired="False">
@@ -698,6 +703,10 @@
       <permission-role>Reviewer</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.simplelayout: Hide title" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.slider: Add Container" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -1051,6 +1060,10 @@
     <permission-map name="ftw.simplelayout: Change Layouts" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Reviewer</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.simplelayout: Hide title" acquired="False">
+      <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.slider: Add Container" acquired="False">
