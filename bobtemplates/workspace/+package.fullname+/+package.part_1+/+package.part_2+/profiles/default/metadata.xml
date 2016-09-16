@@ -17,6 +17,7 @@
         <dependency>profile-ftw.redirector:default</dependency>
         <dependency>profile-ftw.dashboard.dragndrop:default</dependency>
         <dependency>profile-ftw.dashboard.portlets.favourites:default</dependency>
+        <dependency>profile-ftw.dashboard.portlets.favourites:annotationstorage</dependency>
         <dependency>profile-ftw.dashboard.portlets.postit:default</dependency>
         <dependency>profile-ftw.dashboard.portlets.recentlymodified:default</dependency>
         <dependency>profile-ftw.usermanagement:default</dependency>
