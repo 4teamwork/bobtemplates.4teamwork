@@ -52,7 +52,6 @@ Links
 - Github: https://github.com/4teamwork/{{{package.fullname}}}
 - Issues: https://github.com/4teamwork/{{{package.fullname}}}/issues
 - Pypi: http://pypi.python.org/pypi/{{{package.fullname}}}
-- Continuous integration: https://jenkins.4teamwork.ch/search?q={{{package.fullname}}}
 
 
 Copyright
