@@ -1,4 +1,4 @@
-from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
+from {{{package.fullname}}}.testing import {{{package.part_2_upper}}}_FUNCTIONAL
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from unittest2 import TestCase
@@ -6,7 +6,7 @@ import transaction
 
 
 class FunctionalTestCase(TestCase):
-    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+    layer = {{{package.part_2_upper}}}_FUNCTIONAL
 
     def setUp(self):
         self.portal = self.layer['portal']
