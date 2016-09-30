@@ -33,8 +33,6 @@ Usage
 Development
 ===========
 
-**Python:**
-
 1. Fork this repo
 2. Clone your fork
 3. Shell: ``ln -s development.cfg buildout.cfg``
