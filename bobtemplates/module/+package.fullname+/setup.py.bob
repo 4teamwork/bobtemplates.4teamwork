@@ -1,7 +1,6 @@
 from setuptools import setup, find_packages
 
 version = '1.0.0.dev0'
-maintainer = '4teamwork'
 
 tests_require = [
     'ftw.builder',
@@ -36,7 +35,6 @@ setup(
     keywords='{{{package.part_1}}} {{{package.part_2}}}',
     author='4teamwork AG',
     author_email='mailto:info@4teamwork.ch',
-    maintainer=maintainer,
     url='https://github.com/4teamwork/{{{package.fullname}}}',
     license='GPL2',
 
