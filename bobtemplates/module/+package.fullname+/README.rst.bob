@@ -25,19 +25,12 @@ Installation
         {{{package.fullname}}}
 
 
-Usage
-=====
-
-### USAGE ###
-
 Development
 ===========
 
-**Python:**
-
 1. Fork this repo
 2. Clone your fork
-3. Shell: ``ln -s development.cfg buidlout.cfg``
+3. Shell: ``ln -s development.cfg buildout.cfg``
 4. Shell: ``python boostrap.py``
 5. Shell: ``bin/buildout``
 
@@ -52,7 +45,6 @@ Links
 - Github: https://github.com/4teamwork/{{{package.fullname}}}
 - Issues: https://github.com/4teamwork/{{{package.fullname}}}/issues
 - Pypi: http://pypi.python.org/pypi/{{{package.fullname}}}
-- Continuous integration: https://jenkins.4teamwork.ch/search?q={{{package.fullname}}}
 
 
 Copyright
