@@ -1,0 +1,16 @@
+beforeAll(() => { fixture.setBase("{{{package.fullname_path}}}/js/test/fixtures"); });
+
+afterEach(() => { fixture.cleanup(); });
+
+describe("Example", () => {
+
+  it("should prove the truth", () => {
+    assert.equal(1 + 1, 2);
+  });
+
+  it("should load some html fixtures", () => {
+    fixture.load("example.html");
+    assert.equal(fixture.el.querySelector("#example").innerHTML, "example");
+  });
+
+});

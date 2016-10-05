@@ -1,0 +1,42 @@
+"use strict";
+
+module.exports = function(karma) {
+
+  karma.set({
+
+    frameworks: [ "jasmine", "browserify", "chai", "fixture" ],
+
+    files: [
+      { pattern: "./{{{package.fullname_path}}}/js/test/spec/**/*.js", watched: false, included: true, served: true },
+      { pattern: "./{{{package.fullname_path}}}/js/test/fixtures/**/*.html" }
+    ],
+
+    reporters: ['dots'],
+
+    colors: true,
+
+    preprocessors: {
+      "./{{{package.fullname_path}}}/js/test/**/*.js": "browserify",
+      "./{{{package.fullname_path}}}/js/test/fixtures/**/*.html": "html2js"
+    },
+
+    browserify: {
+      debug: true,
+      paths: [
+        "./{{{package.fullname_path}}}/js/src",
+        "./{{{package.fullname_path}}}/js/test/spec"
+      ],
+      transform: [
+        ["babelify", {
+            presets: ["es2015"],
+            sourceRoot: "../../src"
+        }]
+      ]
+    },
+
+    browsers: [ "PhantomJS" ],
+
+    singleRun: false,
+    autoWatch: true
+  });
+};

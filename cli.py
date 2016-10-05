@@ -16,7 +16,8 @@ logger = logging.getLogger('bobtemplates.4teamwork')
 AVAILABLE_TEMPLATES = {
     'web': 'bobtemplates:web',
     'workspace': 'bobtemplates:workspace',
-    'module': 'bobtemplates:module'
+    'module': 'bobtemplates:module',
+    'javascript': 'bobtemplates:javascript',
     }
 
 # example: ~/projects/bobtemplates.4teamwork

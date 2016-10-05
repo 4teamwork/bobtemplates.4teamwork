@@ -1,0 +1,63 @@
+.. contents:: Table of Contents
+
+
+Introduction
+============
+
+### INTRODUCTION ###
+
+Compatibility
+-------------
+
+Plone {{{package.classifier_version}}}.x
+
+
+Installation
+============
+
+- Add the package to your buildout configuration:
+
+::
+
+    [instance]
+    eggs +=
+        ...
+        {{{package.fullname}}}
+
+
+Usage
+=====
+
+### USAGE ###
+
+Development
+===========
+
+**Python:**
+
+1. Fork this repo
+2. Clone your fork
+3. Shell: ``ln -s development.cfg buidlout.cfg``
+4. Shell: ``python boostrap.py``
+5. Shell: ``bin/buildout``
+
+Run ``bin/test`` to test your changes.
+
+Or start an instance by running ``bin/instance fg``.
+
+
+Links
+=====
+
+- Github: https://github.com/4teamwork/{{{package.fullname}}}
+- Issues: https://github.com/4teamwork/{{{package.fullname}}}/issues
+- Pypi: http://pypi.python.org/pypi/{{{package.fullname}}}
+- Continuous integration: https://jenkins.4teamwork.ch/search?q={{{package.fullname}}}
+
+
+Copyright
+=========
+
+This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
+
+``{{{package.fullname}}}`` is licensed under GNU General Public License, version 2.

@@ -1,0 +1,6 @@
+[buildout]
+extends =
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/test-plone-{{{package.classifier_version}}}.x.cfg
+    sources.cfg
+
+package-name = {{{package.fullname}}}
