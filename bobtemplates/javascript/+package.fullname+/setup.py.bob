@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
 
-version = '1.0.0a1.dev0'
-maintainer = '4teamwork'
+version = '1.0.0.dev0'
 
 tests_require = [
     'ftw.builder',
-    'ftw.testing',
     'ftw.testbrowser',
+    'ftw.testing',
     'plone.app.testing',
     'plone.testing',
 ]
@@ -36,7 +35,6 @@ setup(
     keywords='{{{package.part_1}}} {{{package.part_2}}}',
     author='4teamwork AG',
     author_email='mailto:info@4teamwork.ch',
-    maintainer=maintainer,
     url='https://github.com/4teamwork/{{{package.fullname}}}',
     license='GPL2',
 
@@ -46,10 +44,8 @@ setup(
     zip_safe=False,
 
     install_requires=[
-        'setuptools',
-        'plone.dexterity',
-        'plone.app.dexterity',
         'Plone',
+        'setuptools',
     ],
 
     tests_require=tests_require,

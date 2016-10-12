@@ -1,7 +1,4 @@
 {
-  "rules": {
-      "require-yield": "on"
-  },
   "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module"

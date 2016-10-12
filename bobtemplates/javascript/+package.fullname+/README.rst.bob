@@ -25,26 +25,66 @@ Installation
         {{{package.fullname}}}
 
 
-Usage
-=====
-
-### USAGE ###
-
-Development
-===========
-
-**Python:**
-
 1. Fork this repo
 2. Clone your fork
-3. Shell: ``ln -s development.cfg buidlout.cfg``
-4. Shell: ``python boostrap.py``
+3. Shell: ``ln -s development.cfg buildout.cfg``
+4. Shell: ``python bootstrap.py``
 5. Shell: ``bin/buildout``
 
 Run ``bin/test`` to test your changes.
 
 Or start an instance by running ``bin/instance fg``.
 
+JavaScript development
+======================
+
+To setup your development package run:
+
+.. code-block:: bash
+
+    npm install
+
+Building
+--------
+
+Rebuilding the library (resources/javascript.js):
+
+.. code-block:: bash
+
+    grunt build
+
+Watching for changes and rebuild the bundle automatically:
+
+.. code-block:: bash
+
+    grunt watch
+
+or the default task
+
+.. code-block:: bash
+
+    grunt watch
+
+Testing
+-------
+
+Running all test:
+
+.. code-block:: bash
+
+    npm test
+
+or
+
+.. code-block:: bash
+
+    grunt test
+
+Running a specific test:
+
+.. code-block:: bash
+
+    grunt test --grep="Name of your test"
 
 Links
 =====
@@ -52,7 +92,6 @@ Links
 - Github: https://github.com/4teamwork/{{{package.fullname}}}
 - Issues: https://github.com/4teamwork/{{{package.fullname}}}/issues
 - Pypi: http://pypi.python.org/pypi/{{{package.fullname}}}
-- Continuous integration: https://jenkins.4teamwork.ch/search?q={{{package.fullname}}}
 
 
 Copyright
