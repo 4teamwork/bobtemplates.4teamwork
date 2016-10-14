@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     i18n_domain="{{{package.fullname}}}">
 
     <five:registerPackage package="." initialize=".initialize" />
@@ -19,6 +20,12 @@
         directory="profiles/uninstall"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+        />
+
+    <include package="ftw.upgrade" file="meta.zcml" />
+    <upgrade-step:directory
+        profile="{{{package.fullname}}}:default"
+        directory="upgrades"
         />
 
 </configure>
