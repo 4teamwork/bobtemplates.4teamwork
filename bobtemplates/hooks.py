@@ -1,6 +1,5 @@
 from mrbob.bobexceptions import SkipQuestion
 from mrbob.bobexceptions import ValidationError
-import os
 
 
 def post_package_name(configurator, question, answer):
@@ -24,6 +23,12 @@ def post_package_name(configurator, question, answer):
     configurator.variables['package.part_2_capitalized'] = part_2.capitalize()
 
     configurator.variables['package.fullname_underscore'] = "{}_{}".format(
+        part_1, part_2)
+
+    configurator.variables['package.fullname_dot'] = "{}.{}".format(
+        part_1, part_2)
+
+    configurator.variables['package.fullname_path'] = "{}/{}".format(
         part_1, part_2)
 
     return answer
