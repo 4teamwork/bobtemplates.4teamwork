@@ -34,6 +34,7 @@
   <permission>Sharing page: Delegate Owner role</permission>
   <permission>Sharing page: Delegate Reader role</permission>
   <permission>Sharing page: Delegate Reviewer role</permission>
+  <permission>Sharing page: Delegate User Manager role</permission>
   <permission>Sharing page: Delegate roles</permission>
   <permission>Take ownership</permission>
   <permission>View</permission>
@@ -236,6 +237,7 @@
       <permission-role>Owner</permission-role>
     </permission-map>
     <permission-map name="Sharing page: Delegate Reviewer role" acquired="False"/>
+    <permission-map name="Sharing page: Delegate User Manager role" acquired="False"/>
     <permission-map name="Sharing page: Delegate roles" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
