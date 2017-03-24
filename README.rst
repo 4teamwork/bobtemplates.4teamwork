@@ -13,6 +13,7 @@ Installation
 
     $ git clone git@github.com:4teamwork/bobtemplates.4teamwork.git
     $ cd bobtemplates.4teamwork
+    $ ln -s local.cfg buildout.cfg
     $ python2.7 bootstrap.py
     $ bin/buildout
 
