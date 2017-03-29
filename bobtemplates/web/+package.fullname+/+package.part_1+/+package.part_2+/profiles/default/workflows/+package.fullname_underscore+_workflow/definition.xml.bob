@@ -41,10 +41,12 @@
   <permission>ftw.footer: Manage Footer</permission>
   <permission>ftw.htmlblock: Add HTML block</permission>
   <permission>ftw.iframeblock: Add iFrame block</permission>
+  <permission>ftw.keywordwidget: Add new term</permission>
   <permission>ftw.news: Add News</permission>
   <permission>ftw.news: Add NewsFolder</permission>
   <permission>ftw.news: Add NewsListingBlock</permission>
   <permission>ftw.news: Configure mopage trigger</permission>
+  <permission>ftw.news: Edit news external url</permission>
   <permission>ftw.news: Mark news items to show up on home page</permission>
   <permission>ftw.simplelayout: Add ContentPage</permission>
   <permission>ftw.simplelayout: Add FileListingBlock</permission>
@@ -274,6 +276,10 @@
     </permission-map>
     <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
     <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
+    <permission-map name="ftw.keywordwidget: Add new term" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -295,6 +301,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Edit news external url" acquired="False"/>
     <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
@@ -638,6 +645,10 @@
     </permission-map>
     <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
     <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
+    <permission-map name="ftw.keywordwidget: Add new term" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -660,6 +671,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Edit news external url" acquired="False"/>
     <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
@@ -1004,6 +1016,10 @@
     </permission-map>
     <permission-map name="ftw.htmlblock: Add HTML block" acquired="False"/>
     <permission-map name="ftw.iframeblock: Add iFrame block" acquired="False"/>
+    <permission-map name="ftw.keywordwidget: Add new term" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
     <permission-map name="ftw.news: Add News" acquired="False">
       <permission-role>Editor</permission-role>
       <permission-role>Manager</permission-role>
@@ -1025,6 +1041,7 @@
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>
+    <permission-map name="ftw.news: Edit news external url" acquired="False"/>
     <permission-map name="ftw.news: Mark news items to show up on home page" acquired="False"/>
     <permission-map name="ftw.simplelayout: Add ContentPage" acquired="False">
       <permission-role>Editor</permission-role>
