@@ -1,5 +1,6 @@
 *.mo
 *.pyc
+pip-selfcheck.json
 /*.egg-info
 /.installed.cfg
 /.mr.developer.cfg
@@ -10,6 +11,8 @@
 /develop-eggs/
 /dist/
 /eggs/
+/include/
+/lib/
 /parts/
 /src/
 /var/
