@@ -1,0 +1,11 @@
+@include portal-type-font-awesome-icon(billboardcategory, shopping-cart);
+@include portal-type-font-awesome-icon(billboardad, file-o);
+
+
+#breadcrumbs-wrapper #document-actions {
+    float:right;
+}
+
+#breadcrumbs-wrapper #document-actions ul li {
+    float:left;
+}

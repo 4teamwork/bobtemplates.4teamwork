@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:lawgiver="http://namespaces.zope.org/lawgiver"
+    i18n_domain="{{{package.fullname}}}">
+
+    <include package="ftw.lawgiver" file="meta.zcml" />
+
+    <lawgiver:role name="Site Administrator" />
+    <lawgiver:role name="Manager" />
+
+    <lawgiver:map_permissions
+        action_group="add ad"
+        permissions="ftw.billboard: Add BillboardAd,
+                     Delete objects"
+        move="False"
+        />
+
+
+</configure>

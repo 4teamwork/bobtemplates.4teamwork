@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<site i18n_domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <property name="email_from_address" type="string">noreply@4teamwork.ch</property>
+    <property name="email_from_name"
+              type="string">4teamwork AG</property>
+    <property name="validate_email" type="boolean">True</property>
+    <property name="email_charset" type="string">utf-8</property>
+    <property name="layout" type="string">simplelayout-view</property>
+</site>

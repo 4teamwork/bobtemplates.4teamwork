@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<metadata>
+    <dependencies>
+        <dependency>profile-ftw.footer:default</dependency>
+        <dependency>profile-ftw.mobile:default</dependency>
+        <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
+        <dependency>profile-ftw.upgrade:default</dependency>
+        <dependency>profile-ftw.file:default</dependency>
+        <dependency>profile-ftw.news:default</dependency>
+        <dependency>profile-ftw.news:show-on-homepage</dependency>
+        <dependency>profile-plone.app.caching:default</dependency>
+        <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
+        <dependency>profile-plonetheme.blueberry.standard:default</dependency>
+        <dependency>profile-ftw.lawgiver:default</dependency>
+        <dependency>profile-ftw.redirector:default</dependency>
+        <dependency>profile-ftw.subsite:default</dependency>
+        <dependency>profile-ftw.statusmap:default</dependency>
+        <dependency>profile-ftw.sliderblock:default</dependency>
+        <dependency>profile-ftw.htmlblock:default</dependency>
+        <dependency>profile-ftw.iframeblock:default</dependency>
+        <dependency>profile-ftw.events:default</dependency>
+        <dependency>profile-ftw.calendar:default</dependency>
+        <dependency>profile-ftw.calendarexport:default</dependency>
+        <dependency>profile-ftw.contacts:default</dependency>
+        <dependency>profile-ftw.billboard:default</dependency>
+        <dependency>profile-ftw.solr:default</dependency>
+        <dependency>profile-ftw.dashboard.portlets.recentlymodified:default</dependency>
+        <dependency>profile-ftw.dashboard.dragndrop:default</dependency>
+    </dependencies>
+</metadata>

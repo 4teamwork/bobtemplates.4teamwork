@@ -1,0 +1,100 @@
+<?xml version="1.0"  ?>
+<ldapplugins>
+
+        <ldapplugin title="Plone managed LDAP" id="{{{package.part_1}}}_ldap" meta_type="Plone LDAP plugin" update="False">
+
+            <interface value="IAuthenticationPlugin"/>
+            <interface value="IRolesPlugin"/>
+            <interface value="IUserEnumerationPlugin"/>
+            <plugin_property id="prefix" type="string" mode="w" value=""/>
+            <plugin_property id="title" type="string" mode="wd" value="Plone managed LDAP"/>
+            <property id="_login_attr" type="str">
+                <item value="uid"/>
+            </property>
+            <property id="_uid_attr" type="str">
+                <item value="uid"/>
+            </property>
+            <property id="_rdnattr" type="str">
+                <item value="cn"/>
+            </property>
+            <property id="users_base" type="str">
+                <item value="OU=_Benutzer,DC={{{package.part_1}}},DC=ch"/>
+            </property>
+            <property id="users_scope" type="int">
+                <item value="2"/>
+            </property>
+            <property id="_local_groups" type="bool">
+                <item value="False"/>
+            </property>
+            <property id="_implicit_mapping" type="int">
+                <item value="0"/>
+            </property>
+            <property id="groups_base" type="str">
+                <item value=""/>
+            </property>
+            <property id="groups_scope" type="int">
+                <item value="2"/>
+            </property>
+            <property id="_binduid" type="str">
+                <item value="CN=US999,OU=RZ Benutzer_no PWD-Change,OU=_Benutzer,DC={{{package.part_1}}},DC=ch"/>
+            </property>
+            <property id="_bindpwd" type="str">
+               <item value="Bitte manuell konfigurieren."/>
+            </property>
+            <property id="_binduid_usage" type="int">
+                <item value="1"/>
+            </property>
+            <property id="read_only" type="bool">
+                <item value="True"/>
+            </property>
+            <property id="_user_objclasses" type="list">
+                <item value="top"/>
+                <item value="person"/>
+                <item value="user"/>
+            </property>
+            <property id="_extra_user_filter" type="str">
+                <item value=""/>
+            </property>
+            <property id="_pwd_encryption" type="str">
+                <item value="SSHA"/>
+            </property>
+            <property id="_roles" type="list">
+                <item value="Anonymous"/>
+                <item value="Member"/>
+            </property>
+            <schema>
+                <attr id="uid">
+                    <item id="public_name" value=""/>
+                    <item id="ldap_name" value="uid"/>
+                    <item id="friendly_name" value="uid"/>
+                    <item id="multivalued" value="False"/>
+                </attr>
+                <attr id="mail">
+                    <item id="public_name" value="email"/>
+                    <item id="ldap_name" value="mail"/>
+                    <item id="friendly_name" value="Email Address"/>
+                    <item id="multivalued" value="False"/>
+                </attr>
+                <attr id="cn">
+                    <item id="public_name" value="fullname"/>
+                    <item id="ldap_name" value="cn"/>
+                    <item id="friendly_name" value="Canonical Name"/>
+                    <item id="multivalued" value="False"/>
+                </attr>
+                <attr id="sn">
+                    <item id="public_name" value=""/>
+                    <item id="ldap_name" value="sn"/>
+                    <item id="friendly_name" value="Last Name"/>
+                    <item id="multivalued" value="False"/>
+                </attr>
+            </schema>
+            <server update="False" delete="False">
+                <item id="host" value="10.63.54.59" type="str"/>
+                <item id="op_timeout" value="-1" type="int"/>
+                <item id="protocol" value="ldap" type="str"/>
+                <item id="port" value="389" type="str"/>
+                <item id="conn_timeout" value="5" type="int"/>
+            </server>
+        </ldapplugin>
+
+</ldapplugins>
