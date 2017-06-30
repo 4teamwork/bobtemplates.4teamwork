@@ -1,5 +1,7 @@
 from mrbob.bobexceptions import SkipQuestion
 from mrbob.bobexceptions import ValidationError
+import os
+import requests
 
 
 def post_package_name(configurator, question, answer):
@@ -49,3 +51,22 @@ def get_plone_classifier_version(configurator, question, answer):
     configurator.variables['package.classifier_version'] = '.'.join(an_split[:2])
 
     return answer
+
+
+def download_deploy_scripts(configurator):
+    deploy_scripts = {
+        'pull': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/pull'),
+        'after_push': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/after_push'),
+        'update_plone': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/update_plone')
+    }
+
+    path = os.path.join(os.getcwd(),
+                        'generated',
+                        configurator.variables['package.fullname'],
+                        'deploy')
+
+    os.makedirs(path)
+
+    for filename, content in deploy_scripts.iteritems():
+        with open(os.path.join(path, filename), 'w') as script:
+            script.write(content.text)
