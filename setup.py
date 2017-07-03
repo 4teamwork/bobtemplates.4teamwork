@@ -25,6 +25,7 @@ setup(name='bobtemplates.4teamwork',
           'nose',
           'nose-selecttests',
           'nose-parameterized',
+          'requests',
       ],
 
       tests_require=extras_require['test'],
