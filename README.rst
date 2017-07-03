@@ -27,6 +27,8 @@ The following templates are available and ready to generate:
 
 ``web``
   Use this template to generate a website based on ftw.simplelayout
+``intranet``
+  Use this template to generate an intranet based on ftw.simplelayout
 ``workspace``
   Use this template to generate a workspace based on ftw.workspace
 ``module``

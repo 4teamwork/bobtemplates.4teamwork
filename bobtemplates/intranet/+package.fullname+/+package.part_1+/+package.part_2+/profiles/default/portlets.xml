@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<portlets>
+ <portlet
+  addview="ftw.simplelayout.portlet"
+  title="Simplelayout"
+  description="" />
+
+ <assignment name="simplelayout-portlet" category="content_type"
+  key="Plone Site" manager="plone.leftcolumn"
+  type="ftw.simplelayout.portlet" visible="True"/>
+
+ <assignment name="navigation" category="context" key="/"
+    manager="plone.leftcolumn" type="portlets.Navigation" visible="True">
+  <property name="topLevel">1</property>
+  <property name="currentFolderOnly">False</property>
+  <property name="name"/>
+  <property name="includeTop">False</property>
+  <property name="bottomLevel">0</property>
+  <property name="root"/>
+ </assignment>
+
+</portlets>

@@ -1,0 +1,52 @@
+.portaltype-ftw-events-eventfolder #exportsearchform {
+  * { float: left; }
+  label { margin-left: 1em; }
+  input { margin-left: 0.5em; }
+}
+
+#contact-folder-view {
+  .letters { display: none; }
+  .contactFolderSearchSlot { margin-left: -100%; }
+}
+
+.portaltype-plone-site #content {
+  .documentFirstHeading,
+  #plone-document-byline {
+    display: none;
+  }
+}
+
+#document-actions > ul {
+  @include list();
+  > li > a {
+    display: inline-block;
+  }
+}
+
+#breadcrumbs-wrapper > * {
+  float: left;
+}
+#document-action-watch > a {
+  @extend .fa-icon;
+  @extend .fa-eye;
+  font-size: 0;
+
+  &:before {
+    padding-left: .5em;
+    font-size: $font-size-medium;
+  }
+}
+
+// verzeichnis
+.contactSummary {
+  min-height: 0;
+}
+
+#ftw-footer a {
+  text-decoration: underline;
+  color: white;
+
+  &.external-link {
+    background-image: embed-resource("../external.svg", $fill-css:('.icon', #FFFFFF))
+  }
+}

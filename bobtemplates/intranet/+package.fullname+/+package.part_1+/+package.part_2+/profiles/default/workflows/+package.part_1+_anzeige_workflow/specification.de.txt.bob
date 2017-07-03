@@ -1,0 +1,33 @@
+[{{{package.fullname}}} anzeige workflow]
+
+Initialzustand: Veröffentlicht
+
+Rollen Zuweisung:
+  Ersteller => Owner
+  Mitarbeiter => Member
+  Webmaster => Site Administrator
+  System Administrator => Manager
+
+
+Sichtbare Rollen:
+  Webmaster
+
+
+Allgemein:
+  Ein Webmaster kann das Gleiche wie ein Mitarbeiter.
+  Ein Webmaster kann das Gleiche wie ein Ersteller.
+  Ein System Administrator kann das gleiche wie ein Webmaster.
+
+  Ein Ersteller kann diesen Inhalt ansehen.
+  Ein Ersteller kann neuen Inhalt hinzufügen.
+  Ein Ersteller kann diesen Inhalt bearbeiten.
+  Ein Ersteller kann diesen Inhalt löschen.
+
+  Ein Webmaster kann immer Rollen zuweisen.
+  Ein Webmaster kann immer Portlets verwalten.
+  Ein Webmaster kann immer Inhalte konfigurieren.
+  Ein Webmaster kann den Footer verwalten.
+
+Status Veröffentlicht:
+  Ein Mitarbeiter kann diesen Inhalt ansehen.
+

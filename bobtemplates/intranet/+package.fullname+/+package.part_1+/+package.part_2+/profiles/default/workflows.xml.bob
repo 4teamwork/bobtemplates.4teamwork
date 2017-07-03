@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+  <object name="{{{package.fullname_underscore}}}_workflow" meta_type="Workflow"/>
+  <object name="{{{package.part_1}}}_anzeige_workflow" meta_type="Workflow"/>
+  <object name="{{{package.part_1}}}_marktplatz_workflow" meta_type="Workflow"/>
+  <bindings>
+    <type type_id="BillboardAd">
+      <bound-workflow workflow_id="{{{package.part_1}}}_anzeige_workflow"/>
+    </type>
+    <type type_id="BillboardCategory">
+      <bound-workflow workflow_id="{{{package.part_1}}}_marktplatz_workflow"/>
+    </type>
+    <default>
+      <bound-workflow workflow_id="{{{package.fullname_underscore}}}_workflow"/>
+    </default>
+  </bindings>
+</object>

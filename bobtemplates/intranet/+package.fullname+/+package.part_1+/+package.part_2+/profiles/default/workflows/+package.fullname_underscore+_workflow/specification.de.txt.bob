@@ -1,0 +1,49 @@
+[{{{package.fullname}}} workflow]
+
+Initialzustand: Entwurf
+
+Rollen Zuweisung:
+  Ersteller => Owner
+  Mitarbeiter => Member
+  Redaktor => Reviewer
+  Webmaster => Site Administrator
+  System Administrator => Manager
+
+
+Sichtbare Rollen:
+  Redaktor
+  Webmaster
+  System Administrator
+
+
+Allgemein:
+  Ein Redaktor kann das Gleiche wie ein Mitarbeiter.
+  Ein Webmaster kann das Gleiche wie ein Redaktor.
+  Ein System Administrator kann das gleiche wie ein Webmaster.
+
+  Ein Redaktor kann jeden Inhalt ansehen.
+  Ein Redaktor kann neuen Inhalt hinzufügen.
+  Ein Redaktor kann Inhalte bearbeiten.
+  Ein Redaktor kann diesen Inhalt löschen.
+  Ein Redaktor kann immer News-Einträge für Anzeige auf Startseite markieren.
+
+  Ein Webmaster kann immer Rollen zuweisen.
+  Ein Webmaster kann immer Portlets verwalten.
+  Ein Webmaster kann immer Inhalte konfigurieren.
+  Ein Webmaster kann den Footer verwalten.
+
+
+Zustandsänderungen:
+# Entwurf
+  veröffentlichen (Entwurf => Veröffentlicht)
+# Veröffentlicht
+  zurückziehen (Veröffentlicht => Entwurf)
+
+
+Status Entwurf:
+  Ein Redaktor kann diesen Inhalt veröffentlichen.
+
+Status Veröffentlicht:
+  Ein Mitarbeiter kann diesen Inhalt ansehen.
+
+  Ein Redaktor kann Inhalte zurückziehen.

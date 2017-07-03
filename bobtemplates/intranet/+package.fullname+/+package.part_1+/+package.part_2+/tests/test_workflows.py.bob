@@ -1,0 +1,17 @@
+from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
+from ftw.lawgiver.tests.base import WorkflowTest
+
+
+class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecification(WorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+    workflow_path = '../profiles/default/workflows/{{{package.fullname_underscore}}}_workflow'
+
+
+class Test{{{package.part_1_capitalized}}}MarktplatzWorkflowSpecification(WorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+    workflow_path = '../profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow'
+
+
+class Test{{{package.part_1_capitalized}}}AnzeigeWorkflowSpecification(WorkflowTest):
+    layer = {{{package.part_1_upper}}}_FUNCTIONAL
+    workflow_path = '../profiles/default/workflows/{{{package.part_1}}}_anzeige_workflow'

@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:theme="http://namespaces.zope.org/ftw.theming"
+    i18n_domain="{{{package.fullname}}}">
+
+    <include package="ftw.theming" />
+    <browser:resourceDirectory name="{{{package.fullname}}}" directory="resources" />
+
+    <theme:resources profile="{{{package.fullname}}}:default" slot="policy">
+        <theme:scss file="resources/scss/variables.scss" slot="variables" before="ftw.theming:resources/scss/globals/variables.scss"/>
+        <theme:scss file="resources/scss/config.scss" slot="variables" before="ftw.theming:resources/scss/globals/variables.scss"/>
+        <theme:scss file="resources/scss/policy.scss" />
+        <theme:scss file="resources/scss/icons.scss" />
+        <theme:scss file="resources/scss/layout.scss" />
+    </theme:resources>
+
+</configure>

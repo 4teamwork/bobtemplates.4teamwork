@@ -1,0 +1,241 @@
+[
+    {
+        "_path": "slider",
+        "_type": "ftw.slider.Container",
+        "title": "Slider",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "_children": [
+            {
+                "_id": "bsp1",
+                "_type": "ftw.slider.Pane",
+                "title": "Beispiel Slide Eins",
+                "text": "Dies ist das erste Bild.",
+                "image:file": "images/img_3.jpg",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            },
+            {
+                "_id": "bsp2",
+                "_type": "ftw.slider.Pane",
+                "title": "Beispiel Slide Zwei",
+                "text": "Dies ist das zweite Bild.",
+                "image:file": "images/img_1.jpg",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            },
+            {
+                "_id": "bsp3",
+                "_type": "ftw.slider.Pane",
+                "title": "Beispiel Slide Drei",
+                "text": "Dies ist das dritte Bild.",
+                "image:file": "images/img_2.jpg",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            }
+        ]
+    },
+
+    {
+        "_path": "veranstaltungen",
+        "_type": "ftw.events.EventListingBlock",
+        "title": "Veranstaltungen",
+        "filter_by_path": [],
+        "subjects": []
+
+    },
+    {
+        "_path": "block-aktuelles",
+        "_type": "ftw.news.NewsListingBlock",
+        "news_listing_config_title": "Aktuelles",
+        "current_context": false,
+        "quantity": 3,
+        "filter_by_path": [],
+        "subjects": [],
+        "news_on_homepage": true
+    },
+    {
+        "_path": "/",
+        "_annotations": {
+            "ftw.simplelayout.pageconfiguration": {
+                "portletleft": [
+                    {
+                        "cols": [
+                            {
+                                "blocks": [
+                                    {
+                                        "uid": "resolveUUID::/block-aktuelles"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+
+    {
+        "_path": "aktuelles",
+        "_type": "ftw.simplelayout.ContentPage",
+        "title": "Aktuelles",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "_children": [
+            {
+                "_id": "finanzen-logistik",
+                "_type": "ftw.news.NewsFolder",
+                "title": "Finanzen + Logistik",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "_children": [
+                    {
+                        "_id": "news-eintrag-1",
+                        "_type": "ftw.news.News",
+                        "title": "News Eintrag 1",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "description": "Ut tincidunt tincidunt erat. Vivamus quis mi. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Phasellus magna.",
+                        "show_on_homepage": true
+                    },
+                    {
+                        "_id": "news-eintrag-2",
+                        "_type": "ftw.news.News",
+                        "title": "News Eintrag 2",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "description": "Ut tincidunt tincidunt erat. Vivamus quis mi. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Phasellus magna.",
+                        "show_on_homepage": true
+                    },
+                    {
+                        "_id": "news-eintrag-3",
+                        "_type": "ftw.news.News",
+                        "title": "News Eintrag 3",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "description": "Ut tincidunt tincidunt erat. Vivamus quis mi. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Phasellus magna."
+                    },
+                    {
+                        "_id": "news-eintrag-4",
+                        "_type": "ftw.news.News",
+                        "title": "News Eintrag 4",
+                        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                        "description": "Ut tincidunt tincidunt erat. Vivamus quis mi. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Phasellus magna.",
+                        "show_on_homepage": true
+                    }
+                ]
+            },
+            {
+                "_id": "einwohnerdienste-soziales",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Einwohnerdienste + Soziales"
+            },
+            {
+                "_id": "lebensraum-sicherheit",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Lebensraum + Sicherheit"
+            },
+            {
+                "_id": "bildung-kind",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Bildung + Kind"
+            },
+            {
+                "_id": "freizeit-sport",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Freizeit + Sport"
+            },
+            {
+                "_id": "gesundheit-alter",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Gesundheit + Alter"
+            },
+            {
+                "_id": "verwaltungsdirektion",
+                "_type": "ftw.news.NewsFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Verwaltungsdirektion"
+            }
+        ]
+    },
+    {
+        "_path": "agenda",
+        "_type": "ftw.events.EventFolder",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "Agenda"
+    },
+    {
+        "_path": "mitarbeitende",
+        "_type": "ftw.simplelayout.ContentPage",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "Mitarbeitende",
+        "_children": [
+            {
+                "_path": "mitarbeiterverzeichnis",
+                "_type": "ftw.contacts.ContactFolder",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Mitarbeiterverzeichnis"
+            }
+        ]
+    },
+    {
+        "_path": "angebote",
+        "_type": "ftw.simplelayout.ContentPage",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "Angebote für Mitarbeitende",
+        "_children": [
+            {
+                "_path": "marktplatz",
+                "_type": "BillboardCategory",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Marktplatz"
+            }
+        ]
+    },
+    {
+        "_path": "vorlagen-dokumente",
+        "_type": "ftw.simplelayout.ContentPage",
+        "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+        "title": "Vorlagen & Dokumente",
+        "_children": [
+            {
+                "_id": "finanzen-logistik",
+                "_type": "ftw.simplelayout.ContentPage",
+                "title": "Finanzen + Logistik",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+            },
+            {
+                "_id": "einwohnerdienste-soziales",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Einwohnerdienste + Soziales"
+            },
+            {
+                "_id": "lebensraum-sicherheit",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Lebensraum + Sicherheit"
+            },
+            {
+                "_id": "bildung-kind",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Bildung + Kind"
+            },
+            {
+                "_id": "freizeit-sport",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Freizeit + Sport"
+            },
+            {
+                "_id": "gesundheit-alter",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Gesundheit + Alter"
+            },
+            {
+                "_id": "verwaltungsdirektion",
+                "_type": "ftw.simplelayout.ContentPage",
+                "_transitions": "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht",
+                "title": "Verwaltungsdirektion"
+            }
+        ]
+    }
+]

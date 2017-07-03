@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <object name="user">
+        <object name="editmode-switcher-enable" meta_type="CMF Action"
+                i18n:domain="{{{package.fullname}}}" insert-before="logout">
+            <property name="title" i18n:translate="">Enable edit mode</property>
+            <property name="description" i18n:translate=""></property>
+            <property name="url_expr">string:${here/absolute_url}/switch-editmode</property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">python:here.portal_membership.checkPermission('Add portal content', here) and here.restrictedTraverse('@@switch-editmode').get_state() == 'disabled'</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+
+        <object name="editmode-switcher-disable" meta_type="CMF Action"
+                i18n:domain="{{{package.fullname}}}" insert-before="logout">
+            <property name="title" i18n:translate="">Disable edit mode</property>
+            <property name="description" i18n:translate=""></property>
+            <property name="url_expr">string:${here/absolute_url}/switch-editmode</property>
+            <property name="icon_expr"></property>
+            <property name="available_expr">python:here.portal_membership.checkPermission('Add portal content', here) and here.restrictedTraverse('@@switch-editmode').get_state() == 'enabled'</property>
+            <property name="permissions">
+                <element value="View"/>
+            </property>
+            <property name="visible">True</property>
+        </object>
+    </object>
+
+</object>
