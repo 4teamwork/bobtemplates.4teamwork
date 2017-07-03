@@ -2,3 +2,14 @@
   If you want to override existing variables from ftw.theming or
   plonetheme.blueberry, you have to use this file.
  */
+
+/* Override default colors to make the site look more appealing */
+$color-primary: #2980b9;
+$color-secondary: #c0def1;
+$color-edit: #2abb67;
+
+$color-gray-dark: #bdc3C7;
+$color-gray-light: #f1f3f3;
+
+$color-text: #2c3e50;
+$color-text-inverted: #ecf0f1;
