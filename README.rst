@@ -33,6 +33,8 @@ The following templates are available and ready to generate:
   Use this template to generate a workspace based on ftw.workspace
 ``module``
   Use this template if you want to start with a new ftw-module
+``javascript``
+  Use this template to generate a javascript python package
 
 Generating a new policy package
 -------------------------------
