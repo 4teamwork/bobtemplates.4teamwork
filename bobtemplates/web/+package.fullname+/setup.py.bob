@@ -25,6 +25,7 @@ setup(name='{{{package.fullname}}}',
       install_requires=[
           'Plone',
           'collective.editmodeswitcher',
+          'ftw.copymovepatches',
           'ftw.file',
           'ftw.footer',
           'ftw.htmlblock',
