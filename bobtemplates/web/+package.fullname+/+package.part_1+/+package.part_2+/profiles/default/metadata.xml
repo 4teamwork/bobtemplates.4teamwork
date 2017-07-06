@@ -17,5 +17,6 @@
         <dependency>profile-plonetheme.blueberry.standard:default</dependency>
         <dependency>profile-ftw.lawgiver:default</dependency>
         <dependency>profile-ftw.statusmap:default</dependency>
+        <dependency>profile-ftw.protectinactive:default</dependency>
     </dependencies>
 </metadata>
