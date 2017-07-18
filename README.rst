@@ -45,7 +45,7 @@ You only have to answer all the questions and your policy will be created in the
 
 .. image:: https://raw.github.com/4teamwork/bobtemplates.4teamwork/master/docs/flowchart-create.png
 
-A complete documentation for deployments with ftw.bob can be found here: http://devdocs.4teamwork.ch/plone/deployment/deployment/
+A complete documentation for deployments with ftw.bob can be found here: https://devdocs.4teamwork.ch/plone/bobtemplates/
 
 Development
 ===========
