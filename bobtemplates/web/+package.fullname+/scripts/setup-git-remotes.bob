@@ -12,10 +12,3 @@ setup_remote () {
 }
 
 setup_remote "{{{package.deployment_label}}}" "zope@{{{package.server_name}}}:{{{package.deployment_path}}}"
-
-cd $(dirname "$0")/..
-ln -s var/log
-mkdir tmp
-cd tmp
-echo "*" > .gitignore
-echo "!.gitignore" >> .gitignore

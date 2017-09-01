@@ -53,20 +53,24 @@ def get_plone_classifier_version(configurator, question, answer):
     return answer
 
 
-def download_deploy_scripts(configurator):
+def prepare_push_deployment(configurator):
+    # Downloads deploy scripts and creates a symlink (log -> var/log)
     deploy_scripts = {
         'pull': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/pull'),
         'after_push': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/after_push'),
         'update_plone': requests.get('https://raw.githubusercontent.com/4teamwork/plone-git-deployment/master/deploy/update_plone')
     }
 
-    path = os.path.join(os.getcwd(),
-                        'generated',
-                        configurator.variables['package.fullname'],
-                        'deploy')
+    package_path = os.path.join(os.getcwd(),
+                                'generated',
+                                configurator.variables['package.fullname'])
 
-    os.makedirs(path)
+    scripts_path = os.path.join(package_path, 'deploy')
+
+    os.makedirs(scripts_path)
 
     for filename, content in deploy_scripts.iteritems():
-        with open(os.path.join(path, filename), 'w') as script:
+        with open(os.path.join(scripts_path, filename), 'w') as script:
             script.write(content.text)
+
+    os.symlink('var/log', os.path.join(package_path, 'log'))
