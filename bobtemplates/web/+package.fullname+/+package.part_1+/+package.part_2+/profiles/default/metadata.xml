@@ -18,5 +18,6 @@
         <dependency>profile-ftw.lawgiver:default</dependency>
         <dependency>profile-ftw.statusmap:default</dependency>
         <dependency>profile-ftw.protectinactive:default</dependency>
+        <dependency>profile-ftw.keywordwidget:select2js</dependency>
     </dependencies>
 </metadata>
