@@ -27,5 +27,6 @@
         <dependency>profile-ftw.dashboard.portlets.recentlymodified:default</dependency>
         <dependency>profile-ftw.dashboard.dragndrop:default</dependency>
         <dependency>profile-ftw.protectinactive:default</dependency>
+        <dependency>profile-ftw.keywordwidget:select2js</dependency>
     </dependencies>
 </metadata>
