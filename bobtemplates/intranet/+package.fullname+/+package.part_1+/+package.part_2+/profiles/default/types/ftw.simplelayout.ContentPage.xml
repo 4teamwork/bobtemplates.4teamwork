@@ -3,6 +3,10 @@
         meta_type="Dexterity FTI"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
+    <property name="behaviors" purge="False">
+        <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation" />
+    </property>
+
     <property name="allowed_content_types" purge="False">
         <element value="BillboardCategory" />
         <element value="ftw.contacts.ContactFolder" />
