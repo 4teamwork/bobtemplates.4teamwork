@@ -6,3 +6,6 @@ extends =
 [versions]
 zc.buildout =
 ftw.contentpage = 1.12.0
+
+# collective.z3cform.colorpicker >= 2.0 requires Plone 5.
+collective.z3cform.colorpicker = 1.4
