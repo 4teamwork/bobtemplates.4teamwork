@@ -1,0 +1,57 @@
+from functools import reduce
+from setuptools import find_packages
+from setuptools import setup
+
+
+extras = {
+    'api': [
+        'djangorestframework',
+    ],
+    'core': [
+        'django',
+        'django-classy-settings',
+        'factory_boy',
+        'freezegun',
+        'psycopg2',
+        'python-dotenv',
+        'raven',
+    ],
+    'tests': [
+        'pytest',
+        'pytest-cov',
+        'pytest-django',
+        'pytest-dotenv',
+        'pytest-factoryboy',
+    ],
+    'web': [
+    ],
+}
+
+# development requires all
+extras['dev'] = [
+    'django-rest-swagger',
+] + reduce(lambda x, y: x + y, extras.values())
+
+
+setup(
+    name='{{{package.fullname}}}',
+    version='1.0.0.dev0',
+    license='',
+    url='https://github.com/4teamwork/{{{package.fullname}}}',
+
+    author='4teamwork AG',
+    author_email='mailto:info@4teamwork.ch',
+    maintainer='4teamwork AG',
+    maintainer_email='mailto:info@4teamwork.ch',
+
+    packages=find_packages(exclude=['ez_setup']),
+    include_package_data=True,
+
+    python_requires='>=3.5.*, <4',
+    install_requires=extras['core'],
+    tests_require=extras['tests'],
+    extras_require=extras,
+
+    scripts=['manage.py'],
+    setup_requires=['pytest-runner'],
+)

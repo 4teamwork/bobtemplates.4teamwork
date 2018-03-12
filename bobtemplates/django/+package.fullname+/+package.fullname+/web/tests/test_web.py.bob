@@ -1,0 +1,2 @@
+def test_web_application_is_installed(settings):
+    assert '{{{package.fullname}}}.web' in settings.INSTALLED_APPS

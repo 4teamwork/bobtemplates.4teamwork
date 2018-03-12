@@ -1,0 +1,147 @@
+# {{{package.fullname}}}
+
+## Development
+
+### Setup
+
+A few steps are needed to setup the {{{package.fullname}}}.
+Run these steps within the project folder.
+
+1. Create and activate a python virtual environment:
+    `python3 -m venv . && source bin/activate`
+
+2. Install the application and its requirements:
+    `bin/setup`
+
+3. Create a postgresql database
+    `createdb {{{package.fullname}}}_development`
+
+4. Run the migrations:
+    `./manage.py migrate`
+
+5. Run the server:
+    `./manage.py runserver`
+
+*optional steps*
+
+6. Create a super user:
+    `./manage.py createsuperuser`
+
+### Testing
+
+Run the tests using `tox` (needs to be installed localy globaly)
+
+### Logging
+
+Logging is handled by the console in development mode.
+The verbosity can be set using the following environment variables:
+- `DJANGO_LOGGING_LEVEL_{{{package.fullname|upper}}}`: The logging level for the backend. Defaults to `DEBUG`.
+- `DJANGO_LOGGING_LEVEL_DJANGO`: The logging level for Django. Defaults to `INFO`.
+- `DJANGO_LOGGING_LEVEL_ROOT`: The logging level for the rest of the modules.
+You can define them in you local `.env` file.
+
+The available logging levels are: `DEBUG`, `INFO`, `WARNING`, `ERROR` and `CRITICAL`.
+
+## Production
+
+### Setup
+
+Deployment is really easy once you setup [git push deployments](https://github.com/mislav/git-deploy).
+The scripts required for `git-deploy` can be found in the `deploy` folder in the root of the repository.
+
+To be able to run the deployment without further changes, your environment needs the following requisites:
+- A python 3 interpreter must be installed (preferably version 3.6.2)
+- A postgresql server is required
+
+#### First installation
+
+Run the following steps localy **the first time** you deploy to production
+
+1. Add the destination to the git remotes:
+   ```
+   git remote add deployment_name "user@example.com:/path/to/desired/project/folder"
+   ```
+
+2. Log into the server and create the database for the deployment:
+   ```
+   ssh user@example.com
+   createdb deployment_database
+   ```
+
+3. Add deployment scripts to repository:
+   ```
+   wget https://raw.githubusercontent.com/4teamwork/django-git-deployment/master/deploy/setup.sh
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+
+   Do not forget to add the created files to the repository.
+   ```
+   git add setup.sh deploy
+   ```
+
+4. Initialize the git repository in the deployment directory on the server:
+   ```
+   git deploy setup -r deployment_name
+   ```
+
+5. Push the code:
+   ```
+   git push deployment_name master
+   ```
+
+6. Add the environment variables needed by the Django backend:
+   ```
+   ssh -t user@example.com "cd /path/to/desired/project/folder && exec \$SHELL -l"
+   cp .env.template .env
+   vim .env
+   ```
+
+   These variables can / need to be set:
+   - `DJANGO_ALLOWED_HOSTS`: [A list of strings representing the host/domain names that this Django site can serve.](https://docs.djangoproject.com/ko/1.11/ref/settings/#allowed-hosts)
+   - `DJANGO_DATABASE_ENGINE`: [The database engine to connect to the database.](https://docs.djangoproject.com/ko/1.11/ref/settings/#engine) Defaults to `django.db.backends.postgresql_psycopg2`.
+   - `DJANGO_DATABASE_HOST`: [Which host to use when connecting to the database.](https://docs.djangoproject.com/ko/1.11/ref/settings/#host)
+   - `DJANGO_DATABASE_NAME`: [The name of the database to use.](https://docs.djangoproject.com/ko/1.11/ref/settings/#name)
+   - `DJANGO_LOGFILE`: The path to the logfile. Defaults to `log/info.log` in the project's root folder.
+   - `DJANGO_LOGGING_LEVEL_{{{package.fullname|upper}}}`: The logging level for the {{{package.fullname}}} application. Defaults to `WARNING`.
+   - `DJANGO_LOGGING_LEVEL_DJANGO`: The logging level for the Django. Defaults to `WARNING`.
+   - `DJANGO_LOGGING_LEVEL_ROOT`: The logging level for everything else. Defaults to `WARNING`.
+   - `DJANGO_MEDIA_ROOT`: The folder containing the application's files. Defaults to `media` in the project's root folder.
+   - `DJANGO_MEDIA_URL`: The URL for the media. Defaults to `/media/`.
+   - `DJANGO_MODE`: The mode in which you want the backend to run. [Read `django-classy-settings` for more information.](https://django-classy-settings.readthedocs.io/)
+   - `DJANGO_RAVEN_DSN`: The DSN for the project in sentry.
+   - `DJANGO_SECRET_KEY`: [A secret key for a particular Django installation.](https://docs.djangoproject.com/ko/1.11/ref/settings/#secret-key)
+   - `DJANGO_SESSION_COOKIE_AGE`: [The age of the session cookies, in seconds.](https://docs.djangoproject.com/en/1.11/ref/settings/#session-cookie-age)
+   - `DJANGO_SETTINGS_MODULE`: [The settins module for the Django backend.](https://docs.djangoproject.com/en/1.11/topics/settings/#envvar-DJANGO_SETTINGS_MODULE)
+
+   Some of these values are preset.
+   Complete the file by adding the missing values.
+
+   Finally run `after_push`:
+   ```
+   source deploy/after_push
+   ```
+
+#### Updating an existing deployment
+
+Run the following steps to update a deployment
+
+1. Add the deployment to the remotes (if it is not already there):
+   ```
+   git remote add deployment_name "user@example.com:/path/to/desired/project/folder"
+   ```
+
+2. Push the code:
+   ```
+   git push deployment_name master
+   ```
+
+#### Deploying a branch different than master
+
+Sometimes a branch needs to be deployed to a test system, before being merged into the master branch.
+In this case the push command is slightly different:
+
+2. Push the code:
+   ```
+   git push test_deployment_name the_branch_to_be_deployed:master
+   ```

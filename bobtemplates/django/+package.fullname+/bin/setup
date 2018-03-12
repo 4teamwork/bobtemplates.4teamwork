@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+pip install -e ".[dev, tests]" -c versions.txt
+./bin/freeze
+python manage.py migrate

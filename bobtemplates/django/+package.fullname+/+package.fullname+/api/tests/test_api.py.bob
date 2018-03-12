@@ -1,0 +1,2 @@
+def test_api_application_is_installed(settings):
+    assert '{{{package.fullname}}}.api' in settings.INSTALLED_APPS

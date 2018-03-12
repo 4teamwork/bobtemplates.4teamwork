@@ -1,0 +1,2 @@
+def test_core_is_installed(settings):
+    assert '{{{package.fullname}}}.core' in settings.INSTALLED_APPS

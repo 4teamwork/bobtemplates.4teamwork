@@ -1,0 +1,23 @@
+class ApiSettingsMixin:
+
+    @property
+    def INSTALLED_APPS(self):
+        return super().INSTALLED_APPS + [
+            '{{{package.fullname}}}.api',
+            'rest_framework',
+        ]
+
+    @property
+    def REST_AUTHENTICATION_CLASSES(self):
+        return ['rest_framework.authentication.SessionAuthentication']
+
+    @property
+    def REST_FRAMEWORK(self):
+        return {
+            'DEFAULT_AUTHENTICATION_CLASSES': self.REST_AUTHENTICATION_CLASSES,
+            'DEFAULT_RENDERER_CLASSES': self.REST_RENDERER_CLASSES,
+        }
+
+    @property
+    def REST_RENDERER_CLASSES(self):
+        return ['rest_framework.renderers.JSONRenderer']

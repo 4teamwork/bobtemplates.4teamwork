@@ -5,6 +5,7 @@ import os
 extras_require = {
     'test': [
         'unittest2',
+        'tox',
     ],
 }
 
