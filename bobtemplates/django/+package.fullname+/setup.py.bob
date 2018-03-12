@@ -1,0 +1,58 @@
+from setuptools import find_packages
+from setuptools import setup
+
+
+extras = {
+    'api': [
+        'djangorestframework',
+    ],
+    'core': [
+        'django',
+        'django-classy-settings',
+        'factory_boy',
+        'freezegun',
+        'psycopg2',
+        'python-dotenv',
+        'raven',
+    ],
+    'dev': [
+        'django-rest-swagger',
+    ],
+    'tests': [
+        'pytest',
+        'pytest-cov',
+        'pytest-django',
+        'pytest-dotenv',
+        'pytest-factoryboy',
+        'tox',
+    ],
+    'web': [
+    ],
+}
+
+VERSION = '1.0.0.dev0'
+GITHUB_URL = 'https://github.com/4teamwork/{{{package.fullname}}}'
+
+setup(
+    name='{{{package.fullname}}}',
+    version=VERSION,
+    license='',
+    url=GITHUB_URL,
+    download_url=f'{GITHUB_URL}/archive/v{VERSION}.tar.gz',
+
+    author='4teamwork AG',
+    author_email='mailto:info@4teamwork.ch',
+    maintainer='4teamwork AG',
+    maintainer_email='mailto:info@4teamwork.ch',
+
+    packages=find_packages(exclude=['ez_setup']),
+    include_package_data=True,
+
+    python_requires='>=3.5.*, <4',
+    install_requires=extras['core'] + extras['api'] + extras['web'],
+    tests_require=extras['tests'],
+    extras_require=extras,
+
+    scripts=['manage.py'],
+    setup_requires=['pytest-runner'],
+)

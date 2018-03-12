@@ -1,0 +1,9 @@
+from django.urls import include
+from django.urls import path
+from {{{package.fullname}}}.core import admin
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('{{{package.fullname}}}.api.urls')),
+    path('web/', include('{{{package.fullname}}}.web.urls')),
+]

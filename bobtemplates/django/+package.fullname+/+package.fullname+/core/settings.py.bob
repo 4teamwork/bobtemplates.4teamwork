@@ -1,0 +1,271 @@
+from cbs.utils import as_list
+from cbs.utils import as_bool
+from {{{package.fullname}}}.api.settings import ApiSettingsMixin
+from {{{package.fullname}}}.web.settings import WebSettingsMixin
+import cbs
+import os
+import time
+
+
+class Base:
+    ALLOWED_HOSTS = []
+    AUTH_PASSWORD_VALIDATORS = [
+        {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},  # noqa
+        {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},  # noqa
+        {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},  # noqa
+        {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},  # noqa
+    ]
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # noqa
+    DATABASE_NAME = cbs.env(None, key='DJANGO_DATABASE_NAME')
+    DATABASE_HOST = cbs.env(None, key='DJANGO_DATABASE_HOST')
+    FILE_UPLOAD_PERMISSIONS = 0o644
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        '{{{package.fullname}}}',
+    ]
+    LANGUAGE_CODE = 'de-ch'
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ]
+    ROOT_URLCONF = '{{{package.fullname}}}.core.urls'
+    SECRET_KEY = cbs.env(None, key='DJANGO_SECRET_KEY')
+    SESSION_COOKIE_NAME = '{{{package.fullname}}}_session'
+    SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+    TIME_ZONE = 'UTC'
+    USE_I18N = True
+    USE_L10N = True
+    USE_TZ = True
+    WSGI_APPLICATION = '{{{package.fullname}}}.core.wsgi.application'
+
+    @cbs.env(key='DJANGO_DATABASE_ENGINE')
+    def DATABASE_ENGINE(self):
+        return 'django.db.backends.postgresql_psycopg2'
+
+    @property
+    def DATABASES(self):
+        return {
+            'default': {
+                'ENGINE': self.DATABASE_ENGINE,
+                'NAME': self.DATABASE_NAME,
+                'HOST': self.DATABASE_HOST,
+            }
+        }
+
+    @cbs.env(key='DJANGO_MEDIA_ROOT')
+    def MEDIA_ROOT(self):
+        return os.path.join(self.BASE_DIR, 'files')
+
+    @cbs.env(key='DJANGO_MEDIA_URL')
+    def MEDIA_URL(self):
+        return '/media/'
+
+    @cbs.env(key='DJANGO_STATIC_ROOT')
+    def STATIC_ROOT(self):
+        return os.path.join(self.BASE_DIR, 'static')
+
+    @cbs.env(key='DJANGO_STATIC_URL')
+    def STATIC_URL(self):
+        return '/static/'
+
+
+class Build(Base):
+
+    @property
+    def INSTALLED_APPS(self):
+        return super().INSTALLED_APPS + [
+            'django.contrib.staticfiles',
+        ]
+
+
+class Development(ApiSettingsMixin, WebSettingsMixin, Base):
+    DEBUG = True
+
+    @cbs.env(key='DJANGO_DATABASE_HOST')
+    def DATABASE_HOST(self):
+        return 'localhost'
+
+    @property
+    def INSTALLED_APPS(self):
+        return super().INSTALLED_APPS + [
+            'django.contrib.staticfiles',
+            'rest_framework_swagger',
+        ]
+
+    @property
+    def LOGGING(self):
+        return {
+            'version': 1,
+            'disable_existing_loggers': False,
+            'handlers': {
+                'console': {
+                    'level': 'DEBUG',
+                    'class': 'logging.StreamHandler',
+                },
+            },
+            'loggers': {
+                '': {
+                    'handlers': ['console'],
+                    'level': self.LOGGING_LEVEL_ROOT,
+                },
+                '{{{package.fullname}}}': {
+                    'handlers': ['console'],
+                    'level': self.LOGGING_LEVEL_{{{package.fullname|upper}}},
+                    'propagate': False,
+                },
+                'django': {
+                    'handlers': ['console'],
+                    'level': self.LOGGING_LEVEL_DJANGO,
+                    'propagate': False,
+                },
+            },
+        }
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_{{{package.fullname|upper}}}')
+    def LOGGING_LEVEL_{{{package.fullname|upper}}}(self):
+        return 'DEBUG'
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_DJANGO')
+    def LOGGING_LEVEL_DJANGO(self):
+        return 'INFO'
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_ROOT')
+    def LOGGING_LEVEL_ROOT(self):
+        return 'DEBUG'
+
+
+class Production(ApiSettingsMixin, WebSettingsMixin, Base):
+    LANGUAGE_CODE = 'de-ch'
+    RAVEN_DSN = cbs.env(None, key='DJANGO_RAVEN_DSN')
+    SESSION_COOKIE_SECURE = True
+
+    @cbs.env(key='DJANGO_ALLOWED_HOSTS', type=as_list)
+    def ALLOWED_HOSTS(self):
+        return None
+
+    @cbs.env(key='DJANGO_DATABASE_HOST')
+    def DATABASE_HOST(self):
+        return '/var/run/postgresql'
+
+    @property
+    def INSTALLED_APPS(self):
+        return super.INSTALLED_APPS + [
+            'raven.contrib.django.raven_compat',
+        ]
+
+    @cbs.env(key='DJANGO_LOGFILE')
+    def LOGFILE(self):
+        return os.path.join(self.BASE_DIR, 'log/info.log')
+
+    @property
+    def LOGGING(self):
+        return {
+            'version': 1,
+            'disable_existing_loggers': False,
+            'formatters': self.LOGGING_FORMATTERS,
+            'handlers': self.LOGGING_HANDLERS,
+            'loggers': self.LOGGING_LOGGERS,
+        }
+
+    @property
+    def LOGGING_FORMATTERS(self):
+        return {
+            'file': {
+                'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',  # noqa
+            },
+        }
+
+    @property
+    def LOGGING_HANDLERS(self):
+        return {
+            'file': {
+                'level': 'INFO',
+                'class': 'logging.FileHandler',
+                'filename': self.LOGFILE,
+            },
+            'sentry': {
+                'level': 'WARNING',
+                'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',  # noqa
+            },
+        }
+
+    @property
+    def LOGGING_LOGGERS(self):
+        return {
+            '': {
+                'handlers': ['sentry', 'file'],
+                'level': self.LOGGING_LEVEL_ROOT,
+            },
+            '{{{package.fullname}}}': {
+                'handlers': ['console'],
+                'level': self.LOGGING_LEVEL_{{{package.fullname|upper}}},
+                'propagate': False,
+            },
+            'django': {
+                'handlers': ['sentry'],
+                'level': self.LOGGING_LEVEL_DJANGO,
+                'propagate': False,
+            },
+            'rules': {
+                'handlers': ['sentry'],
+                'level': self.LOGGING_LEVEL_RULES,
+                'propagate': False,
+            },
+        }
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_{{{package.fullname|upper}}}')
+    def LOGGING_LEVEL_{{{package.fullname|upper}}}(self):
+        return 'WARNING'
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_DJANGO')
+    def LOGGING_LEVEL_DJANGO(self):
+        return 'WARNING'
+
+    @cbs.env(key='DJANGO_LOGGING_LEVEL_ROOT')
+    def LOGGING_LEVEL_ROOT(self):
+        return 'WARNING'
+
+    @property
+    def RAVEN_CONFIG(self):
+        import raven
+        return {
+            'dsn': self.RAVEN_DSN,
+            'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+        }
+
+    @cbs.env(key='DJANGO_SESSION_COOKIE_AGE', type=int)
+    def SESSION_COOKIE_AGE(self):
+        return 12 * 60 * 60  # 12 hours
+
+
+class Testing(Base):
+
+    @cbs.env(key='DJANGO_DATABASE_HOST')
+    def DATABASE_HOST(self):
+        return '/var/run/postgresql'
+
+    @property
+    def DATABASES(self):
+        return {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': '{name}_{time_stamp}'.format(
+                    name=self.DATABASE_NAME,
+                    time_stamp=str(int(time.time() * 1e6)),
+                ),
+                'HOST': self.DATABASE_HOST,
+            }
+        }
+
+
+MODE = os.environ['DJANGO_MODE']
+cbs.apply(MODE, globals())

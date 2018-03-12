@@ -1,0 +1,29 @@
+# byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# environment variables
+.env
+
+# python virtualenv files and folders
+bin/
+include/
+lib/
+lib64
+pip-selfcheck.json
+pyvenv.cfg
+
+# ignore sqlite databases
+*.sqlite3
+
+# ignore test related folders
+.cache/
+.tox/
+
+# ignore
+files/**/*
+log/**/*
+tmp/**/*
+
+# macOS
+*.DS_Store
