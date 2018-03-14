@@ -6,7 +6,6 @@ import os
 import shutil
 import subprocess
 import sys
-import tox
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('bobtemplates.4teamwork')
@@ -207,12 +206,24 @@ class TemplateGeneratorCLI(object):
             subprocess.check_call([sys.executable, 'bootstrap.py'])
             subprocess.check_call(['bin/buildout'])
 
+    def toxenv(self):
+        with FSFolderContext(self.generated_package_path):
+            logger.info(
+                "Creating a venv for package {}".format(os.getcwd()))
+
+            subprocess.check_call(['python3.6', '-m', 'venv', 'toxenv'])
+            subprocess.check_call(['toxenv/bin/pip', 'install', 'tox'])
+
     def run_template_tests(self):
         with FSFolderContext(self.generated_package_path):
             logger.info(
                 "Run tests for package {}".format(os.getcwd()))
-
-            subprocess.check_call(['bin/test'])
+            if 'tox.ini' in os.listdir('.'):
+                self.toxenv()
+                subprocess.check_call(['toxenv/bin/tox'])
+            else:
+                self.buildout()
+                subprocess.check_call(['bin/test'])
 
     def setup_plone_site(self):
         with FSFolderContext(self.generated_package_path):
@@ -362,7 +373,6 @@ def template_test(args=sys.argv[1:]):
     generator = TemplateGeneratorCLI(args)
 
     generator.autogenerate_package()
-    generator.buildout()
     generator.run_template_tests()
 
 
