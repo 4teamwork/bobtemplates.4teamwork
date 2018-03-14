@@ -206,12 +206,23 @@ class TemplateGeneratorCLI(object):
             subprocess.check_call([sys.executable, 'bootstrap.py'])
             subprocess.check_call(['bin/buildout'])
 
+    def setup(self):
+        with FSFolderContext(self.generated_package_path):
+            logger.info(
+                "Run setup.py for package {}".format(os.getcwd()))
+
+            subprocess.check_call(['python3', '-m', 'venv', '.'])
+            subprocess.check_call(['bin/pip', 'install', '.[dev]', '-cversions.txt'])
+            subprocess.check_call(['bin/pip', 'install', '.[tests]', '-cversions.txt'])
+
     def run_template_tests(self):
         with FSFolderContext(self.generated_package_path):
             logger.info(
                 "Run tests for package {}".format(os.getcwd()))
-
-            subprocess.check_call(['bin/test'])
+            if self.template_name != 'django':
+                subprocess.check_call(['bin/test'])
+            else:
+                subprocess.check_call(['bin/tox'])
 
     def setup_plone_site(self):
         with FSFolderContext(self.generated_package_path):
@@ -361,7 +372,10 @@ def template_test(args=sys.argv[1:]):
     generator = TemplateGeneratorCLI(args)
 
     generator.autogenerate_package()
-    generator.buildout()
+    if generator.template_name != 'django':
+        generator.buildout()
+    else:
+        generator.setup()
     generator.run_template_tests()
 
 
@@ -403,5 +417,8 @@ def fulltest(args=sys.argv[1:]):
     generator.write_back_translations()
 
     generator.autogenerate_package()
-    generator.buildout()
+    if generator.template_name != 'django':
+        generator.buildout()
+    else:
+        generator.setup()
     generator.run_template_tests()
