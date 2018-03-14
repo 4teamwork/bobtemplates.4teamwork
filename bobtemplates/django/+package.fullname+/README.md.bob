@@ -67,23 +67,30 @@ Run the following steps the first time you deploy to production
    git remote add deployment_name "user@example.com:/path/to/desired/project/folder"
    ```
 
-2. Initialize the git repository in the deploy directory
-   ```
-   git deploy setup -r deployment_name
-   ```
-
-3. Log into the server and create the database for the deployment:
+2. Log into the server and create the database for the deployment:
    ```
    ssh user@example.com
    createdb deployment_database
    ```
 
-4. Push the code:
+3. Add deployment scripts to repository:
+   ```
+   wget https://raw.githubusercontent.com/4teamwork/django-git-deployment/master/deploy/setup.sh
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+
+4. Initialize the git repository in the deployment directory on the server:
+   ```
+   git deploy setup -r deployment_name
+   ```
+
+5. Push the code:
    ```
    git push deployment_name master
    ```
 
-5. Add the environment variables needed by the Django backend:
+6. Add the environment variables needed by the Django backend:
    ```
    ssh -t user@example.com "cd /path/to/desired/project/folder && exec \$SHELL -l"
    cp .env.template .env
