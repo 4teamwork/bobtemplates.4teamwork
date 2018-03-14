@@ -14,6 +14,7 @@ logger = logging.getLogger('bobtemplates.4teamwork')
 # Key: Template-Name
 # Value: 'mr.bob template-path'
 AVAILABLE_TEMPLATES = {
+    'django': 'bobtemplates:django',
     'web': 'bobtemplates:web',
     'intranet': 'bobtemplates:intranet',
     'workspace': 'bobtemplates:workspace',
