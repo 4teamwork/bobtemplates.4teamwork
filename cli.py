@@ -184,30 +184,6 @@ class TemplateGeneratorCLI(object):
         self.generated_package_path = os.path.join(
             MODULE_PATH, TARGET_DIR, self.config.get('package.fullname'))
 
-        self.template_workflow_dir_path = os.path.join(
-            TEMPLATES_PATH,
-            self.template_name,
-            '+package.fullname+/+package.part_1+/+package.part_2+/'
-            'profiles/default/workflows')
-
-        self.generated_workflow_dir_path = os.path.join(
-            self.generated_package_path,
-            self.config.get('package.part_1'),
-            self.config.get('package.part_2'),
-            'profiles/default/workflows')
-
-        self.template_locales_dir_path = os.path.join(
-            TEMPLATES_PATH,
-            self.template_name,
-            '+package.fullname+/+package.part_1+/+package.part_2+/locales')
-
-        self.generated_locales_dir_path = os.path.join(
-            self.generated_package_path,
-            self.config.get('package.part_1'),
-            self.config.get('package.part_2'),
-            'locales',
-            )
-
     def generate_package(self, args=None):
         args = args or self.args
         mrbob.cli.main(args=args)
@@ -256,6 +232,20 @@ class TemplateGeneratorCLI(object):
             subprocess.check_call(['bin/instance', 'rebuild_workflows --site platform'])
 
     def write_back_workflow(self):
+        if self.template_workflow_dir_path is None:
+            self.template_workflow_dir_path = os.path.join(
+                TEMPLATES_PATH,
+                self.template_name,
+                '+package.fullname+/+package.part_1+/+package.part_2+/'
+                'profiles/default/workflows')
+
+        if self.generated_workflow_dir_path is None:
+            self.generated_workflow_dir_path = os.path.join(
+                self.generated_package_path,
+                self.config.get('package.part_1'),
+                self.config.get('package.part_2'),
+                'profiles/default/workflows')
+
         logger.info(
             "Write back workflow for package {}".format(self.generated_package_path))
 
@@ -273,6 +263,20 @@ class TemplateGeneratorCLI(object):
             excluded_filenames=['.gitignore', 'result.xml.bob'])
 
     def write_back_translations(self):
+        if self.template_locales_dir_path is None:
+            self.template_locales_dir_path = os.path.join(
+                TEMPLATES_PATH,
+                self.template_name,
+                '+package.fullname+/+package.part_1+/+package.part_2+/locales')
+
+        if self.generated_locales_dir_path is None:
+            self.generated_locales_dir_path = os.path.join(
+                self.generated_package_path,
+                self.config.get('package.part_1'),
+                self.config.get('package.part_2'),
+                'locales',
+                )
+
         logger.info(
             "Write back translations for package {}".format(self.generated_package_path))
 
