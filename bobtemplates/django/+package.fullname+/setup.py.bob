@@ -38,7 +38,10 @@ setup(
     version=VERSION,
     license='',
     url=GITHUB_URL,
-    download_url=f'{GITHUB_URL}/archive/v{VERSION}.tar.gz',
+    download_url='{}/archive/v{}.tar.gz'.format(
+        GITHUB_URL,
+        VERSION,
+    ),
 
     author='4teamwork AG',
     author_email='mailto:info@4teamwork.ch',
