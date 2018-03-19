@@ -219,10 +219,12 @@ class TemplateGeneratorCLI(object):
         with FSFolderContext(self.generated_package_path):
             logger.info(
                 "Run tests for package {}".format(os.getcwd()))
-            if self.template_name != 'django':
-                subprocess.check_call(['bin/test'])
-            else:
+            if self.template_name == 'django':  # XXX tox.ini exists
+                self.setup()
                 subprocess.check_call(['bin/tox'])
+            else:
+                self.buildout()
+                subprocess.check_call(['bin/test'])
 
     def setup_plone_site(self):
         with FSFolderContext(self.generated_package_path):
@@ -372,10 +374,6 @@ def template_test(args=sys.argv[1:]):
     generator = TemplateGeneratorCLI(args)
 
     generator.autogenerate_package()
-    if generator.template_name != 'django':
-        generator.buildout()
-    else:
-        generator.setup()
     generator.run_template_tests()
 
 
