@@ -1,5 +1,5 @@
 {
-  "name": "{{{package.fullname_dot}}}",
+  "name": "{{{package.fullname}}}",
   "version": "1.0.0a1.dev0",
   "repository": "https://github.com/4teamwork/{{{package.fullname}}}",
   "license": "MIT",
