@@ -2,16 +2,16 @@ from {{{package.fullname}}}.testing import {{{package.part_1_upper}}}_FUNCTIONAL
 from ftw.workspace.tests.base import CompareWorkspaceWorkflowTest
 
 
-class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaceContent(CompareWorkspaceWorkflowTest):
+class Test{{{package.fullname_capitalized}}}WorkflowSpecificationWorkspaceContent(CompareWorkspaceWorkflowTest):
     layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspace_content_workflow'
 
 
-class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspace(CompareWorkspaceWorkflowTest):
+class Test{{{package.fullname_capitalized}}}WorkflowSpecificationWorkspace(CompareWorkspaceWorkflowTest):
     layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspace_workflow'
 
 
-class Test{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}WorkflowSpecificationWorkspaces(CompareWorkspaceWorkflowTest):
+class Test{{{package.fullname_capitalized}}}WorkflowSpecificationWorkspaces(CompareWorkspaceWorkflowTest):
     layer = {{{package.part_1_upper}}}_FUNCTIONAL
     workflow_path = '../profiles/default/workflows/workspaces_workflow'

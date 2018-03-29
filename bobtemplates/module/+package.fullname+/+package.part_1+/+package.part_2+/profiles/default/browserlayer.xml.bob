@@ -2,6 +2,6 @@
 <layers>
 
     <layer name="{{{package.fullname}}}"
-           interface="{{{package.fullname}}}.interfaces.I{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}Layer" />
+           interface="{{{package.fullname}}}.interfaces.I{{{package.fullname_capitalized}}}Layer" />
 
 </layers>
