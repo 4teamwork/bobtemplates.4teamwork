@@ -1,0 +1,5 @@
+from zope.interface import Interface
+
+
+class I{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}Layer(Interface):
+    """Request layer for {{{package.fullname}}}"""
