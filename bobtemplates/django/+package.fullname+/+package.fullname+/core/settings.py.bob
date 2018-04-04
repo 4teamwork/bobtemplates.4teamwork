@@ -84,6 +84,7 @@ class Build(Base):
     def INSTALLED_APPS(self):
         return super().INSTALLED_APPS + [
             'django.contrib.staticfiles',
+            '{{{package.fullname}}}.web',
         ]
 
 
