@@ -207,7 +207,7 @@ class Production(ApiSettingsMixin, WebSettingsMixin, Base):
                 'level': self.LOGGING_LEVEL_ROOT,
             },
             '{{{package.fullname}}}': {
-                'handlers': ['console'],
+                'handlers': ['sentry'],
                 'level': self.LOGGING_LEVEL_{{{package.fullname|upper}}},
                 'propagate': False,
             },
