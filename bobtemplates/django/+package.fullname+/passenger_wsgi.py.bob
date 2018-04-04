@@ -1,0 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+basedir = os.path.dirname(os.path.abspath(__file__))
+envfile = os.path.join(basedir, '.env')
+load_dotenv(envfile)
+
+import {{{package.fullname}}}.core.wsgi
+application = {{{package.fullname}}}.core.wsgi.application
