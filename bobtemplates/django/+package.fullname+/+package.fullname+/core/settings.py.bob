@@ -159,7 +159,7 @@ class Production(ApiSettingsMixin, WebSettingsMixin, Base):
 
     @property
     def INSTALLED_APPS(self):
-        return super.INSTALLED_APPS + [
+        return super().INSTALLED_APPS + [
             'raven.contrib.django.raven_compat',
         ]
 
