@@ -32,6 +32,9 @@ extras['dev'] = [
     'django-rest-swagger',
 ] + reduce(lambda x, y: x + y, extras.values())
 
+# defined above dev to prevent addind requirements twice
+extras['prod'] = extras['core'] + extras['api'] + extras['web']
+
 
 setup(
     name='{{{package.fullname}}}',
@@ -48,7 +51,7 @@ setup(
     include_package_data=True,
 
     python_requires='>=3.5.*, <4',
-    install_requires=extras['core'],
+    install_requires=extras['prod'],
     tests_require=extras['tests'],
     extras_require=extras,
 
