@@ -12,6 +12,9 @@ lib64
 pip-selfcheck.json
 pyvenv.cfg
 
+.eggs/
+{{{package.fullname}}}.egg-info/
+
 # ignore sqlite databases
 *.sqlite3
 
