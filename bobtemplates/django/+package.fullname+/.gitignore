@@ -6,7 +6,6 @@ __pycache__/
 .env
 
 # python virtualenv files and folders
-bin/
 include/
 lib/
 lib64
