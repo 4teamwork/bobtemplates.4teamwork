@@ -74,3 +74,24 @@ def prepare_push_deployment(configurator):
             script.write(content.text)
 
     os.symlink('var/log', os.path.join(package_path, 'log'))
+
+
+def prepare_django_push_deployment(configurator):
+    url = ('https://raw.githubusercontent.com/4teamwork/django-git-deployment'
+           '/master/deploy/{}')
+    deploy_scripts = {
+        script: requests.get(url.format(script))
+        for script in ('after_push', 'before_restart', 'restart', 'setup')
+    }
+
+    package_path = os.path.join(os.getcwd(),
+                                'generated',
+                                configurator.variables['package.fullname'])
+
+    scripts_path = os.path.join(package_path, 'deploy')
+
+    os.makedirs(scripts_path)
+
+    for filename, content in deploy_scripts.iteritems():
+        with open(os.path.join(scripts_path, filename), 'w') as script:
+            script.write(content.text)
