@@ -24,10 +24,9 @@ def post_package_name(configurator, question, answer):
     configurator.variables['package.part_2_upper'] = part_2.upper()
     configurator.variables['package.part_2_capitalized'] = part_2.capitalize()
 
+    configurator.variables['package.fullname_capitalized'] = '{}{}'.format(
+        part_1.capitalize(), part_2.capitalize())
     configurator.variables['package.fullname_underscore'] = "{}_{}".format(
-        part_1, part_2)
-
-    configurator.variables['package.fullname_dot'] = "{}.{}".format(
         part_1, part_2)
 
     configurator.variables['package.fullname_path'] = "{}/{}".format(

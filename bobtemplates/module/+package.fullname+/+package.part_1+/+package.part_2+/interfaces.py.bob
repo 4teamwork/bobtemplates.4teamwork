@@ -2,5 +2,4 @@ from zope.interface import Interface
 
 
 class I{{{package.fullname_capitalized}}}Layer(Interface):
-    """Browser layer for {{{package.fullname}}}.
-    """
+    """Request layer for {{{package.fullname}}}"""

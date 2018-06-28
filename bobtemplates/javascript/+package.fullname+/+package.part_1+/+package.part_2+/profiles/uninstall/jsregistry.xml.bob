@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry" autogroup="False">
 
-    <javascript id="++resource++{{{package.fullname_dot}}}/{{{package.fullname_dot}}}.js" remove="True"/>
+    <javascript id="++resource++{{{package.fullname}}}/{{{package.fullname}}}.js" remove="True"/>
 
 </object>

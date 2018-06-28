@@ -2,7 +2,7 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry" autogroup="False">
 
     <javascript cacheable="True" compression="safe" cookable="True" enabled="on"
-                expression="" id="++resource++{{{package.fullname_dot}}}/{{{package.fullname_dot}}}.js"
+                expression="" id="++resource++{{{package.fullname}}}/{{{package.fullname}}}.js"
                 inline="False"/>
 
 </object>

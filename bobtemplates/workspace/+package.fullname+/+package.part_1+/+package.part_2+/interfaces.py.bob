@@ -1,6 +1,6 @@
 from zope.interface import Interface
 
 
-class I{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}Layer(Interface):
+class I{{{package.fullname_capitalized}}}Layer(Interface):
     """Browser layer for {{{package.fullname}}}.
     """

@@ -23,7 +23,7 @@
         />
 
     <browser:resourceDirectory
-        name="{{{package.fullname_dot}}}"
+        name="{{{package.fullname}}}"
         directory="resources"
         />
 

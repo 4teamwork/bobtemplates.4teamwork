@@ -9,7 +9,7 @@
         class=".byline.{{{package.part_1}}}DocumentBylineViewlet"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
         permission="zope2.View"
-        layer="{{{package.fullname}}}.interfaces.I{{{package.part_1_capitalized}}}{{{package.part_2_capitalized}}}Layer"
+        layer="{{{package.fullname}}}.interfaces.I{{{package.fullname_capitalized}}}Layer"
         />
 
 </configure>
