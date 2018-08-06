@@ -4,3 +4,10 @@ extends =
     sources.cfg
 
 package-name = {{{package.fullname}}}
+
+versions = versions
+
+
+[versions]
+setuptools = 28.2.0
+zc.buildout = 2.11.0
