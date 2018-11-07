@@ -60,6 +60,51 @@ msgstr ""
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Site Administrator"
 msgstr ""
 
+#. Default: "Eingereicht"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--STATUS--eingereicht"
+msgstr ""
+
+#. Default: "Entwurf"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--STATUS--entwurf"
+msgstr ""
+
+#. Default: "Veröffentlicht"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--STATUS--veroffentlicht"
+msgstr ""
+
+#. Default: "einreichen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--einreichen--entwurf_eingereicht"
+msgstr ""
+
+#. Default: "veröffentlichen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--eingereicht_veroffentlicht"
+msgstr ""
+
+#. Default: "veröffentlichen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+msgstr ""
+
+#. Default: "zurückweisen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckweisen--eingereicht_entwurf"
+msgstr ""
+
+#. Default: "zurückziehen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--eingereicht_entwurf"
+msgstr ""
+
+#. Default: "zurückziehen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--veroffentlicht_entwurf"
+msgstr ""
+
 #. Default: "veröffentlichen"
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "veröffentlichen"
