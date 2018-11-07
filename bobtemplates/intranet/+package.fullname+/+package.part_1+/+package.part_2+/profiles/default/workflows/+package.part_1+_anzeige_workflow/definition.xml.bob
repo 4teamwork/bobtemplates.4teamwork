@@ -49,6 +49,7 @@
   <permission>ftw.events: Configure mopage trigger</permission>
   <permission>ftw.file: Add File</permission>
   <permission>ftw.file: Edit advanced fields</permission>
+  <permission>ftw.file: Edit date fields</permission>
   <permission>ftw.footer: Manage Footer</permission>
   <permission>ftw.htmlblock: Add HTML block</permission>
   <permission>ftw.iframeblock: Add iFrame block</permission>
@@ -303,6 +304,10 @@
       <permission-role>Site Administrator</permission-role>
     </permission-map>
     <permission-map name="ftw.file: Edit advanced fields" acquired="False">
+      <permission-role>Manager</permission-role>
+      <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Edit date fields" acquired="False">
       <permission-role>Manager</permission-role>
       <permission-role>Site Administrator</permission-role>
     </permission-map>

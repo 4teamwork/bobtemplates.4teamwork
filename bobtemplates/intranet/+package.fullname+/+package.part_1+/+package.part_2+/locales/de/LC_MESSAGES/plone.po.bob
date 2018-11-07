@@ -47,6 +47,11 @@ msgstr "Ersteller"
 msgid "{{{package.part_1}}}_anzeige_workflow--ROLE--Site Administrator"
 msgstr "Webmaster"
 
+#. Default: "Veröffentlicht"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_anzeige_workflow/specification.de.txt
+msgid "{{{package.part_1}}}_anzeige_workflow--STATUS--veroffentlicht"
+msgstr "Veröffentlicht"
+
 #. Default: "System Administrator"
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Manager"
@@ -76,6 +81,26 @@ msgstr "Redaktor"
 msgid "{{{package.fullname_underscore}}}_workflow--ROLE--Site Administrator"
 msgstr "Webmaster"
 
+#. Default: "Entwurf"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--STATUS--entwurf"
+msgstr "Entwurf"
+
+#. Default: "Veröffentlicht"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--STATUS--veroffentlicht"
+msgstr "Veröffentlicht"
+
+#. Default: "veröffentlichen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+msgstr "veröffentlichen"
+
+#. Default: "zurückziehen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
+msgid "{{{package.fullname_underscore}}}_workflow--TRANSITION--zuruckziehen--veroffentlicht_entwurf"
+msgstr "zurückziehen"
+
 #. Default: "System Administrator"
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
 msgid "{{{package.part_1}}}_marktplatz_workflow--ROLE--Manager"
@@ -100,6 +125,26 @@ msgstr "Redaktor"
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
 msgid "{{{package.part_1}}}_marktplatz_workflow--ROLE--Site Administrator"
 msgstr "Webmaster"
+
+#. Default: "Entwurf"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
+msgid "{{{package.part_1}}}_marktplatz_workflow--STATUS--entwurf"
+msgstr "Entwurf"
+
+#. Default: "Veröffentlicht"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
+msgid "{{{package.part_1}}}_marktplatz_workflow--STATUS--veroffentlicht"
+msgstr "Veröffentlicht"
+
+#. Default: "veröffentlichen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
+msgid "{{{package.part_1}}}_marktplatz_workflow--TRANSITION--veroffentlichen--entwurf_veroffentlicht"
+msgstr "veröffentlichen"
+
+#. Default: "zurückziehen"
+#: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.part_1}}}_marktplatz_workflow/specification.de.txt
+msgid "{{{package.part_1}}}_marktplatz_workflow--TRANSITION--zuruckziehen--veroffentlicht_entwurf"
+msgstr "zurückziehen"
 
 #. Default: "veröffentlichen"
 #: {{{package.part_1}}}/{{{package.part_2}}}/profiles/default/workflows/{{{package.fullname_underscore}}}_workflow/specification.de.txt
