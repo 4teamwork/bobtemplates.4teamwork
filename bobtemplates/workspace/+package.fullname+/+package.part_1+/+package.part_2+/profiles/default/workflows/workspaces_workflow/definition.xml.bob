@@ -53,6 +53,7 @@
   <permission>ftw.contentpage: Toggle IAuthority marker interface</permission>
   <permission>ftw.file: Add File</permission>
   <permission>ftw.file: Edit advanced fields</permission>
+  <permission>ftw.file: Edit date fields</permission>
   <permission>ftw.footer: Manage Footer</permission>
   <permission>ftw.meeting: Add Meeting</permission>
   <permission>ftw.meeting: Add Meeting Item</permission>
@@ -228,6 +229,9 @@
       <permission-role>Reviewer</permission-role>
     </permission-map>
     <permission-map name="ftw.file: Edit advanced fields" acquired="False">
+      <permission-role>Manager</permission-role>
+    </permission-map>
+    <permission-map name="ftw.file: Edit date fields" acquired="False">
       <permission-role>Manager</permission-role>
     </permission-map>
     <permission-map name="ftw.footer: Manage Footer" acquired="False"/>
