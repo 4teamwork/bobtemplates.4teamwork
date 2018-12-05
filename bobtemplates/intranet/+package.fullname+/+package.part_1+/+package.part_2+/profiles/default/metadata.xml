@@ -28,5 +28,6 @@
         <dependency>profile-ftw.dashboard.dragndrop:default</dependency>
         <dependency>profile-ftw.protectinactive:default</dependency>
         <dependency>profile-ftw.keywordwidget:select2js</dependency>
+        <dependency>profile-ftw.tika:default</dependency>
     </dependencies>
 </metadata>
