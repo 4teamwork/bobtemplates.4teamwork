@@ -2,11 +2,6 @@ from setuptools import setup, find_packages
 import os
 
 
-extras_require = {
-    'test': [
-    ],
-}
-
 setup(name='bobtemplates.4teamwork',
       version='1.0.0.dev0',
       author='4teamwork AG',
@@ -26,9 +21,6 @@ setup(name='bobtemplates.4teamwork',
           'nose-parameterized',
           'requests',
       ],
-
-      tests_require=extras_require['test'],
-      extras_require=extras_require,
 
       entry_points="""
       # -*- Entry points: -*-
