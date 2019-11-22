@@ -7,7 +7,7 @@ extends =
     sources.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/warmup.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/authentication.cfg
-
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/raven.cfg
 
 deployment-number = {{{package.deployment_number}}}
 
@@ -18,3 +18,6 @@ instance-eggs +=
 filestorage-parts = {{{package.fullname}}}
 develop = .
 supervisor-client-startsecs = 20
+
+[raven]
+dsn = xxxxxxxxxxxx
