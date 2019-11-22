@@ -1,5 +1,5 @@
 from nose_parameterized import parameterized
-from unittest2 import TestCase
+from unittest import TestCase
 import cli
 
 
