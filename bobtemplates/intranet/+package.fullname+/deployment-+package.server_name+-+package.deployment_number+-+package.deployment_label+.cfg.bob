@@ -9,7 +9,7 @@ extends =
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/authentication.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/solr.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/tika-jaxrs-server.cfg
-
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/raven.cfg
 
 deployment-number = {{{package.deployment_number}}}
 
@@ -27,3 +27,6 @@ environment-vars +=
 filestorage-parts = {{{package.fullname}}}
 develop = .
 supervisor-client-startsecs = 20
+
+[raven]
+dsn = xxxxxxxxxxxx

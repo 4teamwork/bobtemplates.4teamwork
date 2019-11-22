@@ -8,6 +8,7 @@ extends =
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/warmup.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/authentication.cfg
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/tika-jaxrs-server.cfg
+    https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/raven.cfg
 
 
 deployment-number = {{{package.deployment_number}}}
@@ -31,3 +32,6 @@ environment-vars +=
    BUMBLEBEE_SECRET               <SECRET>
    BUMBLEBEE_INTERNAL_PLONE_URL   <INTERNAL-URL>
    BUMBLEBEE_PUBLIC_URL           <PUBLIC-URL>
+
+[raven]
+dsn = xxxxxxxxxxxx
