@@ -1,0 +1,3 @@
+[versions]
+# python2 versions
+more-itertools = < 6.0

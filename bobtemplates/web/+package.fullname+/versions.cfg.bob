@@ -7,3 +7,6 @@ extends =
 setuptools = 28.2.0
 zc.buildout = 2.11.0
 zope.configuration = 3.8.0
+
+# python2 versions
+more-itertools = < 6.0
