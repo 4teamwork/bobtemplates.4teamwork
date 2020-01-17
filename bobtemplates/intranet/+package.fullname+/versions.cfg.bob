@@ -4,6 +4,11 @@ extends =
     https://raw.githubusercontent.com/4teamwork/ftw-buildouts/master/hotfixes/{{{package.plone_version}}}.cfg
 
 [versions]
-setuptools = 28.2.0
-zc.buildout = 2.11.0
+setuptools = <45
+zc.buildout =
 zope.configuration = 3.8.0
+
+six = 1.12.0
+
+# python2 versions
+more-itertools = < 6.0

@@ -5,9 +5,14 @@ extends =
 
 [versions]
 ftw.contentpage = 1.12.0
-setuptools = 28.2.0
-zc.buildout = 2.11.0
+setuptools = <45
+zc.buildout =
 zope.configuration = 3.8.0
 
 # collective.z3cform.colorpicker >= 2.0 requires Plone 5.
 collective.z3cform.colorpicker = 1.4
+
+six = 1.12.0
+
+# python2 versions
+more-itertools = < 6.0
