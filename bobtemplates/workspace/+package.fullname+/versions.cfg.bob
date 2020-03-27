@@ -16,3 +16,6 @@ six = 1.12.0
 
 # python2 versions
 more-itertools = < 6.0
+
+# Prevent version conflict between "ftw.workspace" and "bumblebee.file".
+ftw.file = >=1.11.2, <2a
